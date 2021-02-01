@@ -44,7 +44,7 @@ const userValidators = [
 
 /* GET users listing. */
 router.get("/sign-up", csrfProtection, (req, res) => {
-  const user = db.User.build(); //why??
+  //const user = db.User.build(); //why??
   res.render("user-sign-up", {
     title: "Sign Up",
     csrfToken: req.csrfToken(),
@@ -82,7 +82,7 @@ router.post(
   })
 );
 
-router.get('/users/login', csrfProtection, (req, res) => {
+router.get('/login', csrfProtection, (req, res) => {
   res.render('user-login', {
     title: 'Login',
     csrfToken: req.csrfToken()
@@ -99,7 +99,7 @@ const loginValidators = [
 ];
 
 router.post(
-  "/users/login",
+  "/login",
   csrfProtection,
   loginValidators,
   asyncHandler(async (req, res) => {
@@ -135,9 +135,9 @@ router.post(
   })
 );
 
-router.post('/user/logout', (req, res) => {
+router.post('/logout', (req, res) => {
   logoutUser(req, res);
-  res.redirect('/user/login')
+  res.redirect('/users/login')
 })
 
 module.exports = router;
