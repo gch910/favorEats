@@ -8,6 +8,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const { restoreUser } = require('./auth');
 
 const app = express();
 
@@ -17,6 +18,7 @@ app.set('view engine', 'pug');
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(restoreUser) //restore user auth middleware
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
@@ -37,6 +39,20 @@ store.sync();
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
+//for redirect session - session.save
+// app.post('/users/login', (req, res) => {
+//   //login user
+//   req.session.user
+//   const isPassword = await bcrypt.compare(password, user.hashedPassword)
+//   if(isPassword) - etc.
+//   //make sure update happens before redirect
+//   //when you register user
+//   //and when you login a user
+//   req.session.save(() => {
+//     res.redirect
+//   })
+// })
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

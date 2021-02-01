@@ -1,0 +1,19 @@
+extends layout.pug
+
+block content
+  form(action="/users/sign-up" method="post")
+    input(type="hidden", name="_csrf", value=csrfToken)
+    div
+      label(for="username") Username
+      input(type="text" name="username" id="username" value=user.username placeholder="Username" required)
+    div
+      label(for="email") Email
+      input(type="email" name="email" id="email" value=user.email placeholder="Email" required)
+    div
+      label(for="password") Password
+      input(type="password" name="password" id="password" value=user.hashedPassword placeholder="Password" required)
+    div 
+      label(for="confirmPassword") Confirm Password
+      input(type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required)
+    div
+      button(type="submit") Sign Up!
