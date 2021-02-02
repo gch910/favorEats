@@ -7,19 +7,19 @@ block content
       ul
         each error in errors
           li= error
-  form(action="/users/sign-up" method="post")
-    input(type="hidden", name="_csrf", value=csrfToken)
-    div
-      label(for="username") Username
-      input(type="text" name="username" id="username" value=user.username placeholder="Username")
-    div
-      label(for="email") Email
-      input(type="email" name="email" id="email" value=user.email placeholder="Email")
-    div
-      label(for="password") Password
-      input(type="password" name="password" id="password" placeholder="Password")
-    div 
-      label(for="confirmPassword") Confirm Password
-      input(type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password")
-    div
-      button(type="submit") Sign Up!
+  div(class="form-container")
+    h1(id="form-header") favorEats
+    div(class="form-div")
+      form(action="/users/sign-up" class="form" method="post")
+        input(type="hidden", name="_csrf", value=csrfToken)
+        div.input-div
+          input(type="text" name="username" id="username" value=user.username placeholder="Username" class="input-field")
+        div.input-div
+          input(type="email" name="email" id="email" value=user.email placeholder="Email" class="input-field")
+        div.input-div
+          input(type="password" name="password" id="password" placeholder="Password" class="input-field")
+        div.input-div
+          input(type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="input-field")
+        div.button-div
+          button(type="submit" id="signup-button") Sign Up!
+        a(href="/users/login") Already have an account? Login here.

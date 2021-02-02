@@ -1,20 +1,83 @@
+@import url("https://fonts.googleapis.com/css?family=Sofia");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand&display=swap");
+
 body {
-    background-color: #f8f4e3;
+  background-color: #f8f4e3;
 }
 
+#form-header {
+  display: flex;
+  justify-content: center;
+  font-family: "Sofia", sans-serif;
+  font-size: 80px;
+  color: #b5e2fa;
+  text-decoration: underline rgb(199, 197, 197);
+}
 .input-field {
-    font-size: 20px;
-    color: #3a3a3a;
-    height: 50px;
-    width: 250px;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #3a3a3a;
+  height: 50px;
+  width: 350px;
+  text-align: center;
+  border-radius: 0.7em;
 }
 
-.form {
-    display: flex;
-    justify-content: center;
-
+.form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-div {
-    padding: 5px;
+  padding: 5px;
+}
+
+.button-div {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  padding-top: 5%;
+  margin-bottom: 5%;
+}
+.form-container {
+  border: 2px solid #3a3a3a;
+  margin: 5% 37% 40% 37%;
+  padding-bottom: 2%;
+  border-radius: 3em;
+}
+#login-button {
+  height: 50px;
+  width: 90px;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: rgb(207, 207, 207);
+  color: #6d6d6d;
+  border-radius: 2em;
+}
+
+#signup-button {
+  height: 50px;
+  width: 150px;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: rgb(207, 207, 207);
+  color: #6d6d6d;
+  border-radius: 2em;
+}
+
+a:link {
+  color: #b5e2fa;
+  font-family: "Quicksand", sans-serif;
+  text-align: center;
+  margin-left: 12%;
+}
+
+a:visited {
+  color: #0fa3b1;
 }
