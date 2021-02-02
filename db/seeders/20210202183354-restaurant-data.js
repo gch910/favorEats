@@ -1,0 +1,288 @@
+"use strict";
+
+module.exports = {
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.bulkInsert("Restaurants", [
+      {
+        name: "Perla's",
+        category: "Seafood",
+        description:
+          "Fish, oysters & surf 'n' turf are dished at this laid-back spot with an open kitchen & shaded patio.",
+        streetAddress: "1400 S Congress Ave",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78704,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Home Slice Pizza",
+        category: "Pizza",
+        description:
+          "Thin-crust slices & pies for dining in or carry out, open late for takeaway on weekends.",
+        streetAddress: "1415 S Congress Ave",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78704,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Matt's El Rancho",
+        category: "Mexican",
+        description:
+          "Family-friendly Tex-Mex spot that's been drawing crowds with enchiladas & margaritas since 1952.",
+        streetAddress: "2613 S Lamar Blvd",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78704,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Franklin Barbecue",
+        category: "Barbecue",
+        description:
+          "Long lines form early for brisket, pulled pork & other smoked meats at this lunch-only spot.",
+        streetAddress: "900 E 11th St",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78702,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Jeffrey's",
+        category: "Steak house",
+        description:
+          "Posh fine-dining icon featuring upscale New American cuisine in a tony setting plus an active bar.",
+        streetAddress: "1204 W Lynn St",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78703,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Veracruz",
+        category: "Mexican",
+        description:
+          "Simple spot for authentic tacos with spit-grilled meats or veggie options, plus juice & Machinehead coffee.",
+        streetAddress: "2505 Webberville Rd",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78702,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Lucky Robot",
+        category: "Sushi",
+        description:
+          "Hip option for Tokyo-inspired street fare including Asian tacos, sushi & dumplings, plus sake punch.",
+        streetAddress: "1303 S Congress Ave",
+        city: "Austin",
+        state: "TX",
+        zipCode: 78704,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Okeechobee Steak House",
+        category: "Steak house",
+        description:
+          "This standby for steak draws a crowd with a meat-centric menu plus a varied wine selection.",
+        streetAddress: "2854 Okeechobee Blvd",
+        city: "West Palm Beach",
+        state: "FL",
+        zipCode: 33409,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Eagle Grill & Oyster Bar",
+        category: "Seafood",
+        description:
+          "Convivial pub with wooden booths featuring a range of American eats & raw bar selections.",
+        streetAddress: "4636 Jog Rd",
+        city: "Greenacres",
+        state: "FL",
+        zipCode: 33467,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Big Bear Brewing Company",
+        category: "American",
+        description:
+          "Bustling brewpub serving up home-brewed beer plus American comfort food such as beer cheese soup.",
+        streetAddress: "1800 N University Dr",
+        city: "Coral Springs",
+        state: "FL",
+        zipCode: 33071,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Bern's Steak House",
+        category: "Steak house",
+        description:
+          "Opened in 1956, this destination features dry-aged steaks, a huge wine list & flocked wallpaper.",
+        streetAddress: "1208 S Howard Ave",
+        city: "Tampa",
+        state: "FL",
+        zipCode: 33606,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Old Key Lime House",
+        category: "Seafood",
+        description:
+          "Palapa-roofed hut & historic house with regular live tunes, casual seafood & Intracoastal views.",
+        streetAddress: "300 E Ocean Ave",
+        city: "Lantana",
+        state: "FL",
+        zipCode: 33462,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Cafe Hollander",
+        category: "Belgian",
+        description:
+          "Breakfast, lunch, dinner, weekend brunch, amazing selection of craft and Belgian biers, bloody marys",
+        streetAddress: "2608 N Downer Ave",
+        city: "Milwaukee",
+        state: "WI",
+        zipCode: 53211,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Cafe Corazon",
+        category: "Mexican",
+        description:
+          "Colorful eatery for area-sourced Mexican fare with vegan options, margaritas & weekend brunch.",
+        streetAddress: "2394 Kinnickinnic Ave",
+        city: "Milwaukee",
+        state: "WI",
+        zipCode: 53211,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Centro Cafe",
+        category: "Italian",
+        description:
+          "Great Italian food at reasonable prices, amazing wine selection along with thoughtful craft cocktails! ",
+        streetAddress: "808 E Center St",
+        city: "Milwaukee",
+        state: "WI",
+        zipCode: 53211,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Kopp's Frozen Custard",
+        category: "Fast Food",
+        description:
+          "Iconic spot with a line of cow sculptures outside & a menu of frozen custards & jumbo burgers.",
+        streetAddress: "5373 N Port Washington Rd",
+        city: "Milwaukee",
+        state: "WI",
+        zipCode: 53211,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Beans and Barley",
+        category: "Deli",
+        description:
+          "Health-conscious breakfast fare & sandwiches in airy, cheerful digs with a deli & organic market.",
+        streetAddress: "1901 E North Ave",
+        city: "Milwaukee",
+        state: "WI",
+        zipCode: 53211,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Honey Butter Fried Chicken",
+        category: "American",
+        description:
+          "A perennial North Side favorite, Honey Butter Fried Chicken comes from a pair of talented chefs whose chicken specials delighted the underground dinner scene. These crisp and skinless pieces of meat come with the restaurant's signature honey butter.",
+        streetAddress: "3361 N Elston Ave",
+        city: "Chicago",
+        state: "Il",
+        zipCode: 60618,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "SuperDawg Drive-in",
+        category: "Fast Food",
+        description:
+          "Superdawg's founders, Maurie and Flaurie Berman, stand guard over this venerable Chicago drive-in; customers can spot those giant hot dog statues bearing their likenesses from miles away at the intersection of Devon, Nagle, and Milwaukee. Superdawg is a throwback dining experience where customers park their cars and talk to staff through crackling drive-in speakers and carhops bring out trays of food. Superdawg's offering isn't a traditional Chicago-style dog, but it is a tradition.",
+        streetAddress: "6363 N Milwaukee Ave",
+        city: "Chicago",
+        state: "Il",
+        zipCode: 60646,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Smoque BBQ",
+        category: "Barbecue",
+        description:
+          "With two smokers to prep meaty St. Louis-style and baby-back ribs, tender brisket, apple-and-oak-smoked pulled pork and more, this destination on the Northwest Side neighborhood of Irving Park delivers barbecue in the style of Kansas City and Memphis. Over the summer, owner Barry Sorkin converted his parking lot into a socially distant and friendly covered patio.",
+        streetAddress: "3800 N Pulaski Rd",
+        city: "Chicago",
+        state: "Il",
+        zipCode: 60641,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Parachute",
+        category: "Korean-American",
+        description:
+          "Beverly Kim and Johnny Clark's Korean-American restaurant in Avondale is one of the most critically acclaimed restaurants in America, and for good reason. The Michelin-starred restaurant has leaned into carryout with Lil' Parachute. It's a vehicle for Parachute's popular dishes, the onces that fare better to go. Find bing bread, short ribs, and fried chicken.",
+        streetAddress: "3500 N Elston Ave",
+        city: "Chiacgo",
+        state: "Il",
+        zipCode: 60618,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Coalfire Pizza",
+        category: "Pizza",
+        description:
+          "Coalfire serves an American spin on traditional Neapolitan-style pizza. Its signature: a thin crust emerging slightly charred and bubbly from an 800-degree oven fueled by clean burning coal.The award - winning pizza is so popular that customers are willing to wait longer for tables(there are no reservations at Coalfire).Ingredients are sourced from local artisan butchers and growers, who produce hormone - free, humanely raised meats and organic, non - GMO fresh produce.",
+        streetAddress: "1321 W Grand Ave",
+        city: "Chiacgo",
+        state: "Il",
+        zipCode: 60642,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+      {
+        name: "Carnivale",
+        category: "Latin American",
+        description:
+          "Immerse yourself in the festive, eclectic, and global atmosphere of Carnivale that is inspired by the cuisine & culture of Mexico, South America, and Central America. Enjoy Latin fusion cuisine, exotic cocktails & one of a kind desserts. With a lush interior and original artwork, the Carnivale experience makes every meal a celebration.",
+        streetAddress: "702 Fulton St",
+        city: "Chicago",
+        state: "Il",
+        zipCode: 60661,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+      },
+    ]);
+  },
+
+  down: (queryInterface, Sequelize) => {
+    return queryInterface.bulkDelete("Restaurants", null, {});
+  },
+};

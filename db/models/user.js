@@ -22,7 +22,20 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   User.associate = function (models) {
-    // associations can be defined here
+    const columnMapping = {
+      through: "VisitedRestaurant",
+      otherKey: "restaurantId",
+      foreignKey: "userId",
+    };
+    const columnMapping2 = {
+      through: "wantToVisit",
+      otherKey: "restaurantId",
+      foreignKey: "userId",
+    };
+    User.belongsToMany(models.Restaurant, columnMapping);
+    User.belongsToMany(models.Restaurant, columnMapping2);
+    User.hasMany(models.Comment, { foreignKey: "userId" });
+    User.hasMany(models.Rating, { foreignKey: "userId" });
   };
   return User;
 };
