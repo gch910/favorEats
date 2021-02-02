@@ -1,0 +1,25 @@
+extends layout.pug
+
+block content
+  if errors
+    div(class='alert alert-danger' role='alert')
+      p The following error(s) occurred:
+      ul
+        each error in errors
+          li= error
+  form(action="/users/sign-up" method="post")
+    input(type="hidden", name="_csrf", value=csrfToken)
+    div
+      label(for="username") Username
+      input(type="text" name="username" id="username" placeholder="Username")
+    div
+      label(for="email") Email
+      input(type="email" name="email" id="email" placeholder="Email")
+    div
+      label(for="password") Password
+      input(type="password" name="password" id="password" placeholder="Password")
+    div 
+      label(for="confirmPassword") Confirm Password
+      input(type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password")
+    div
+      button(type="submit") Sign Up!
