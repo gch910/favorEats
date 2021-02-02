@@ -55,7 +55,7 @@ router.post(
   "/sign-up",
   csrfProtection,
   userValidators,
-  asyncHanlder(async (req, res) => {
+  asyncHandler(async (req, res) => {
     const { username, email, password } = req.body;
 
     const validatorErrors = validationResult(req);
@@ -135,7 +135,7 @@ router.post(
   })
 );
 
-router.post('/logout', (req, res) => {
+router.get('/logout', (req, res) => {
   logoutUser(req, res);
   res.redirect('/users/login')
 })
