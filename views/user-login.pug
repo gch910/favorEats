@@ -7,13 +7,15 @@ block content
       ul
         each error in errors
           li= error
-  form(action="/users/login" method="post")
-    input(type="hidden" name="_csrf" value=csrfToken)
-    div
-      label(for="email") Email
-      input(type="email" name="email" id="email" placeholder="Email")
-    div
-      label(for="password") Password
-      input(type="password" name="password" id="password" placeholder="Password")
-    div
-      button(type="submit") Login!
+  div(class="form")
+    form(action="/users/login" method="post")
+      div(class="form-field-container")
+        input(type="hidden" name="_csrf" value=csrfToken)
+        div.input-div
+          label(for="email") 
+          input(type="email" name="email" id="email" placeholder="Email" class="input-field")
+        div.input-div
+          label(for="password") 
+          input(type="password" name="password" id="password" placeholder="Password" class="input-field")
+        div
+          button(type="submit" class="input") Login!
