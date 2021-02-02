@@ -44,9 +44,10 @@ const userValidators = [
 
 /* GET users listing. */
 router.get("/sign-up", csrfProtection, (req, res) => {
-  //const user = db.User.build(); //why??
+  const user = db.User.build(); //why??
   res.render("user-sign-up", {
     title: "Sign Up",
+    user,
     csrfToken: req.csrfToken(),
   });
 });
@@ -83,8 +84,10 @@ router.post(
 );
 
 router.get('/login', csrfProtection, (req, res) => {
+  const user = db.User.build();
   res.render('user-login', {
     title: 'Login',
+    user,
     csrfToken: req.csrfToken()
   })
 })
