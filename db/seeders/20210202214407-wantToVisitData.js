@@ -5,25 +5,25 @@ module.exports = {
     return queryInterface.bulkInsert("wantToVisits", [
       {
         userId: 1,
-        restaurantId: 50,
+        restaurantId: 4,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         userId: 1,
-        restaurantId: 49,
+        restaurantId: 10,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         userId: 1,
-        restaurantId: 62,
+        restaurantId: 17,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
       {
         userId: 1,
-        restaurantId: 57,
+        restaurantId: 21,
         createdAt: new Date(),
         updatedAt: new Date(),
       },
