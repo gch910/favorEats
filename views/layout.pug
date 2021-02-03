@@ -5,11 +5,12 @@ html
       title="Express Starter App"
       link(rel='stylesheet' href='/stylesheets/index.css')
   body
-    nav
-      img(src='../media/logos/goodreads.png' width="2px")
-      a(href='/') Home
-      a(href='/restaurants/visited') Visited Restaurants
-      a(href='/restaurants/want-to-visit') Want to Visit
-      a(href='/restaurants') Browse
-      input(type="text")
+    div(class="navbar")
+      nav
+        img(src='/media/logos/goodreads.png' width="100px")
+        a(href='/') Home
+        a(href='/restaurants/visited') Visited Restaurants
+        a(href='/restaurants/want-to-visit') Want to Visit
+        a(href='/restaurants') Browse
+        input(type="text")
   block content

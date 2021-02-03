@@ -1,0 +1,14 @@
+extends layout.pug
+
+block content
+
+  h1= restaurant.name
+    div Category: #{restaurant.category}
+    div= restaurant.description
+    div=restaurant.streetAdress
+    div=restaurant.city
+    div=restaurant.state
+    div=restaurant.zipCode
+    //- div= restaurantComments[0].comment
+    //- div= restaurantRatings[0].rating     
+    

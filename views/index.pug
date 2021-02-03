@@ -16,17 +16,17 @@ block content
     while n < 3
       - ++n
       div
-         a(href=`/restaurant/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+         a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
 
   h2 Want To Visit
     - var n = 0;
     while n < 3
       - ++n
       div
-        a(href=`/restaurant/${wantToVisit[n].id}`)= wantToVisit[n].name
+        a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
   div
     h2 Top Rated Restaurants
       each restaurant in highestRated
         div
-          a(href=`/restaurant/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
+          a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
 
