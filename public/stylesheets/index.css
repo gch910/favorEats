@@ -81,3 +81,10 @@ a:link {
 a:visited {
   color: #0fa3b1;
 }
+
+a.want-to-visit-links {
+  color: green;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  text-align: center;
+  margin-left: 5%;
+}
