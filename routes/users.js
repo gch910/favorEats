@@ -2,7 +2,7 @@ const express = require("express");
 const router = express.Router();
 const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
-
+const { requireAuth } = require("../auth");
 const { loginUser, logoutUser } = require("../auth");
 const { csrfProtection, asyncHandler } = require("./utils");
 const db = require("../db/models");

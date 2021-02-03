@@ -1,7 +1,10 @@
 const express = require("express");
 const router = express.Router();
+const bcrypt = require("bcryptjs");
+const { check, validationResult } = require("express-validator");
 const { requireAuth } = require("../auth");
-const { asyncHandler } = require("./utils");
+const { loginUser, logoutUser } = require("../auth");
+const { csrfProtection, asyncHandler } = require("./utils");
 const db = require("../db/models");
 
 router.get('/visited', requireAuth, asyncHandler(async(req, res) => {
@@ -12,8 +15,7 @@ router.get('/visited', requireAuth, asyncHandler(async(req, res) => {
         id: user,
       },
     });
-
-    const visitedRestaurants = visited[0].visited
+   const visitedRestaurants = visited[0].visited
 
     res.render('visited', {
         visitedRestaurants
@@ -22,8 +24,29 @@ router.get('/visited', requireAuth, asyncHandler(async(req, res) => {
 }));
 
 
+  //GET route for 'want-to-visit' restaurants
+router.get(
+  "/want-to-visit",
+  requireAuth,
+  asyncHandler(async (req, res, next) => {
+    const currentUser = visited[0];
+    const wantToVisit = visited[0].Restaurants;
+
+    res.render("want-to-visit", {
+      currentUser,
+      wantToVisit,
+    });
+  })
+);
+
 router.get('restaurants/:id', asyncHandler(async(req, res) => {
     
 }))
 
 module.exports = router;
+
+   
+
+
+
+
