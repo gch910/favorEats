@@ -29,8 +29,17 @@ router.get(
   "/want-to-visit",
   requireAuth,
   asyncHandler(async (req, res, next) => {
-    const currentUser = visited[0];
-    const wantToVisit = visited[0].Restaurants;
+    
+    const user = req.session.auth.userId;
+    const wantVisit = await db.User.findAll({
+      include: [db.Restaurant, { model: db.Restaurant, as: "visited" }],
+      where: {
+        id: user,
+      },
+    });
+    
+    const currentUser = wantVisit[0];
+    const wantToVisit = wantVisit[0].Restaurants;
 
     res.render("want-to-visit", {
       currentUser,
