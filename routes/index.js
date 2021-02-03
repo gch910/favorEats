@@ -19,10 +19,12 @@ router.get(
         id: user,
       },
     });
+
+    console.log(visited[0].Restaurants.wantToVisit)
     //needed to console.log to see object so we know what to key into
     const restaurants = visited[0].Restaurants
     
-    // console.log(visited[0].Restaurants.name);
+    
 
     res.render("index", {
       title: "a/A Express Skeleton Homes",
