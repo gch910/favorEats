@@ -9,13 +9,16 @@ router.get(
   "/",
   restoreUser,
   asyncHandler(async (req, res, next) => {
+    // console.log(req.session);
     const user = req.session.auth.userId;
     const visited = await db.Restaurant.findAll({
-      include: VisitedRestaurant,
+      include: db.VisitedRestaurant,
+      //not sure about everything below!
       where: {
-        userId: user,
+        db.VisitedRestaurant.userId: user,
       },
     });
+    // console.log(visited[0].VisitedRestaurant);
 
     res.render("index", {
       title: "a/A Express Skeleton Homes",
