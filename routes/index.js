@@ -15,12 +15,16 @@ router.get(
       where: {
         id: user,
       },
+      order: ['updatedAt'],
     });
+
+
     const currentUser = visited[0]
     const visitedRestaurants = visited[0].visited
     const wantToVisit = visited[0].Restaurants
     console.log(visited[0])
     
+    console.log(visitedRestaurants)
 
     res.render("index", {
       currentUser,

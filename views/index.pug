@@ -9,11 +9,19 @@ append head
 block content
   h1 Welcome, #{currentUser.username}
   h2 Visited Restaurants
-    each restaurant in visitedRestaurants
-      div
-        a(href='/restaurants/:id')= restaurant.name
+    //- each restaurant in visitedRestaurants
+    //-   div
+    //-     a(href='/restaurants/:id')= restaurant.name
+    - var n = 0;
+    while n < 3
+      - ++n
+      div= visitedRestaurants[n].name
+    
+  
+      
   h2 Want To Visit
-    each restaurant in wantToVisit
-      div
-        a(href='/restaurants/:id')= restaurant.name
+    - var n = 0;
+    while n < 3
+      - ++n
+      div= wantToVisit[n].name
 
