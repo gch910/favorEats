@@ -15,7 +15,8 @@ module.exports = (sequelize, DataTypes) => {
     {}
   );
   wantToVisit.associate = function (models) {
-    // associations can be defined here
+    // wantToVisit.belongsTo(models.User, {
+    //   foreignKey: "userId"})
   };
   return wantToVisit;
 };

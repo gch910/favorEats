@@ -83,14 +83,14 @@ router.post(
   })
 );
 
-router.get('/login', csrfProtection, (req, res) => {
+router.get("/login", csrfProtection, (req, res) => {
   const user = db.User.build();
-  res.render('user-login', {
-    title: 'Login',
+  res.render("user-login", {
+    title: "Login",
     user,
-    csrfToken: req.csrfToken()
-  })
-})
+    csrfToken: req.csrfToken(),
+  });
+});
 
 const loginValidators = [
   check("email")
@@ -138,9 +138,9 @@ router.post(
   })
 );
 
-router.get('/logout', (req, res) => {
+router.get("/logout", (req, res) => {
   logoutUser(req, res);
-  res.redirect('/users/login')
-})
+  res.redirect("/users/login");
+});
 
 module.exports = router;
