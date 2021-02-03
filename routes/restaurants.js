@@ -58,7 +58,8 @@ router.get('/', requireAuth, asyncHandler(async(req, res) => {
     })
 }))
 
-router.get('/:id', asyncHandler(async(req, res) => {
+router.get('/:id', requireAuth, csrfProtection, asyncHandler(async(req, res) => {
+    const user = db.User.build();
     const restaurantId = req.params.id
     const restaurant = await db.Restaurant.findByPk(restaurantId, {
         include: [db.Comment, db.Rating],
