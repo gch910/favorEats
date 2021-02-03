@@ -7,11 +7,7 @@ const { loginUser, logoutUser } = require("../auth");
 const { csrfProtection, asyncHandler } = require("./utils");
 const db = require("../db/models");
 
-//GET route for 'want-to-visit' restaurants
-router.get(
-  "/want-to-visit",
-  requireAuth,
-  asyncHandler(async (req, res, next) => {
+router.get('/visited', requireAuth, asyncHandler(async(req, res) => {
     const user = req.session.auth.userId;
     const visited = await db.User.findAll({
       include: [db.Restaurant, { model: db.Restaurant, as: "visited" }],
@@ -19,7 +15,20 @@ router.get(
         id: user,
       },
     });
+   const visitedRestaurants = visited[0].visited
 
+    res.render('visited', {
+        visitedRestaurants
+
+    })
+}));
+
+
+  //GET route for 'want-to-visit' restaurants
+router.get(
+  "/want-to-visit",
+  requireAuth,
+  asyncHandler(async (req, res, next) => {
     const currentUser = visited[0];
     const wantToVisit = visited[0].Restaurants;
 
@@ -30,4 +39,14 @@ router.get(
   })
 );
 
+router.get('restaurants/:id', asyncHandler(async(req, res) => {
+    
+}))
+
 module.exports = router;
+
+   
+
+
+
+
