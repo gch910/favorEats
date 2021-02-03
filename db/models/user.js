@@ -26,6 +26,7 @@ module.exports = (sequelize, DataTypes) => {
       through: "VisitedRestaurant",
       otherKey: "restaurantId",
       foreignKey: "userId",
+      as: "visited"
     };
     const columnMapping2 = {
       through: "wantToVisit",
@@ -36,6 +37,9 @@ module.exports = (sequelize, DataTypes) => {
     User.belongsToMany(models.Restaurant, columnMapping2);
     User.hasMany(models.Comment, { foreignKey: "userId" });
     User.hasMany(models.Rating, { foreignKey: "userId" });
+    //test
+    // User.hasMany(models.VisitedRestaurant, { foreignKey: 'userId'})
+    // User.hasMany(models.wantToVisit, { foreignKey: 'userId'})
   };
   return User;
 };

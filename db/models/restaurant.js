@@ -39,6 +39,7 @@ module.exports = (sequelize, DataTypes) => {
       through: "VisitedRestaurant",
       otherKey: "userId",
       foreignKey: "restaurantId",
+      as: "visited"
     };
     const columnMapping2 = {
       through: "wantToVisit",

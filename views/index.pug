@@ -7,7 +7,13 @@ append head
   script(src="/javascripts/index.js" type="module" defer)
 
 block content
-  h1= title
-  p Welcome to your Project Skeleton
-  each restaurant in restaurants
-    div= restaurant.name
+  h1 Welcome, #{currentUser.username}
+  h2 Visited Restaurants
+    each restaurant in visitedRestaurants
+      div
+        a(href='/restaurants/:id')= restaurant.name
+  h2 Want To Visit
+    each restaurant in wantToVisit
+      div
+        a(href='/restaurants/:id')= restaurant.name
+
