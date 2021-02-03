@@ -8,6 +8,7 @@ const session = require('express-session');
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
+const restaurantsRouter = require('./routes/restaurants')
 const { restoreUser } = require('./auth');
 
 const app = express();
@@ -38,6 +39,7 @@ store.sync();
 app.use(restoreUser) //restore user auth middleware
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/restaurants', restaurantsRouter);
 
 //for redirect session - session.save
 // app.post('/users/login', (req, res) => {
