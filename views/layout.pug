@@ -1,16 +1,15 @@
 doctype html
 html
   head
-      block head
-        title="Express Starter App"
-        link(rel='stylesheet' href='/stylesheets/index.css')
+    block head
+      title="Express Starter App"
+      link(rel='stylesheet' href='/stylesheets/index.css')
   body
-    if locals.authenticated
-      nav
-        img(src="../media/logos/goodreads.svg")
-        a(href='/') Home
-        a(href='/users/visited') Visited Restaurants
-        a(href='/users/want-to-visit') Want to Visit
-        a(href='/restaurants') Browse
-        input(type="text")
-      block content
+    nav
+      img(src='../media/logos/goodread_logo.png')
+      a(href='/') Home
+      a(href='/users/visited') Visited Restaurants
+      a(href='/users/want-to-visit') Want to Visit
+      a(href='/restaurants') Browse
+      input(type="text")
+  block content
