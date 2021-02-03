@@ -5,11 +5,15 @@
 ## Install these dependencies
 - npm install bcryptjs express-validator csurf
 
-`## Create a .env file in the root directory with this info:
+## Create a .env file in the root directory with this info:
 DB_USERNAME=favoreats_app
+
 DB_PASSWORD=password
+
 DB_DATABASE=favoreats
-DB_HOST=localhost`
+
+DB_HOST=localhost
+
 
 ```npx sequelize-cli db:create```
 
