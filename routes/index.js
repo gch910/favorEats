@@ -15,21 +15,29 @@ router.get(
       where: {
         id: user,
       },
-      order: ['updatedAt'],
     });
 
+    const topRestaurants = await db.Rating.findAll({
+      include: db.Restaurant,
+      where: {
+        rating: 1,
 
+      }
+    })
+    const highestRated = topRestaurants[0].Restaurant.name
+    console.log(highestRated)
     const currentUser = visited[0]
     const visitedRestaurants = visited[0].visited
     const wantToVisit = visited[0].Restaurants
-    console.log(visited[0])
+   
     
-    console.log(visitedRestaurants)
+    
 
     res.render("index", {
       currentUser,
       visitedRestaurants,
-      wantToVisit
+      wantToVisit,
+      highestRated
     });
   })
 );

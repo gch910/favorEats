@@ -16,12 +16,14 @@ block content
     while n < 3
       - ++n
       div= visitedRestaurants[n].name
-    
-  
       
   h2 Want To Visit
     - var n = 0;
     while n < 3
       - ++n
       div= wantToVisit[n].name
+  div
+    //- h2 Top Rated Restaurants
+    //-   each restaurant in highestRated
+    //-     div= restaurant.name
 
