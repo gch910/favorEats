@@ -16,9 +16,9 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   VisitedRestaurant.associate = function (models) {
-    VisitedRestaurant.hasMany(models.Restaurant, {
-      foreignKey: "restaurantId",
-    });
+    // VisitedRestaurant.hasMany(models.Restaurant, {
+    //   foreignKey: "restaurantId",
+    // });
   };
   return VisitedRestaurant;
 };

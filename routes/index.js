@@ -12,10 +12,10 @@ router.get(
     // console.log(req.session);
     const user = req.session.auth.userId;
     const visited = await db.Restaurant.findAll({
-      include: db.VisitedRestaurant,
+      include: db.User,
       //not sure about everything below!
       where: {
-        db.VisitedRestaurant.userId: user,
+        id: user,
       },
     });
     // console.log(visited[0].VisitedRestaurant);

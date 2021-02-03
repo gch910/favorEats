@@ -49,9 +49,9 @@ module.exports = (sequelize, DataTypes) => {
     Restaurant.belongsToMany(models.User, columnMapping2);
     Restaurant.hasMany(models.Comment, { foreignKey: "restaurantId" });
     Restaurant.hasMany(models.Rating, { foreignKey: "restaurantId" });
-    Restaurant.belongsTo(models.VisitedRestaurant, {
-      foreignKey: "restaurantId",
-    });
+    // Restaurant.belongsTo(models.VisitedRestaurant, {
+    //   foreignKey: "restaurantId",
+    // });
   };
   return Restaurant;
 };

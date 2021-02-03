@@ -32,7 +32,7 @@ module.exports = (sequelize, DataTypes) => {
       otherKey: "restaurantId",
       foreignKey: "userId",
     };
-    // User.belongsToMany(models.Restaurant, columnMapping);
+    User.belongsToMany(models.Restaurant, columnMapping);
     User.belongsToMany(models.Restaurant, columnMapping2);
     User.hasMany(models.Comment, { foreignKey: "userId" });
     User.hasMany(models.Rating, { foreignKey: "userId" });
