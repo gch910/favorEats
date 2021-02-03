@@ -20,12 +20,12 @@ router.get(
     const topRestaurants = await db.Rating.findAll({
       include: db.Restaurant,
       where: {
-        rating: [1, 2, 3, 4, 5]
+        rating: [4, 5]
 
       }
     })
     const highestRated = topRestaurants
-    console.log(highestRated)
+    // console.log(topRestaurants[0])
     const currentUser = visited[0]
     const visitedRestaurants = visited[0].visited
     const wantToVisit = visited[0].Restaurants
