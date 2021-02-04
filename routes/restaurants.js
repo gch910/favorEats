@@ -48,8 +48,34 @@ router.get(
   })
 );
 
-router.get('restaurants/:id', asyncHandler(async(req, res) => {
-    
+router.get('/', requireAuth, asyncHandler(async(req, res) => {
+    const restaurants = await db.Restaurant.findAll()
+
+    const showRestaurants = restaurants
+
+    res.render('restaurants', {
+        showRestaurants
+    })
+}))
+
+router.get('/:id', requireAuth, csrfProtection, asyncHandler(async(req, res) => {
+    const user = db.User.build();
+    const restaurantId = req.params.id
+    const restaurant = await db.Restaurant.findByPk(restaurantId, {
+        include: [db.Comment, db.Rating],
+    })
+
+    const restaurantComments = restaurant.Comments //[0].comment
+    const restaurantRatings = restaurant.Ratings 
+
+   
+
+    res.render('current-restaurant', {
+        restaurant,
+        restaurantComments,
+        restaurantRatings
+
+    })
 }))
 
 module.exports = router;
