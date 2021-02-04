@@ -155,7 +155,7 @@ module.exports = {
         city: "Lantana",
         state: "FL",
         zipCode: 33462,
-        img: "https://floridabeerblog.files.wordpress.com/2014/06/wpid-20140530_202353.jpg",
+        img: "https://zagat-photos.imgix.net/ChIJqSZjQwHZ2IgRchlF4a-XR38/ad5bb38f49524c8e3119fa1e98a8c2ca.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
