@@ -9,13 +9,14 @@ block content
     div=restaurant.city
     div=restaurant.state
     div=restaurant.zipCode
-    //- div= restaurantComments[0].comment
-    //- div= restaurantRatings[0].rating   
+    each comment in restaurantComments
+      div= comment.comment
+    //- div= restaurantRatings[0].rating
     h1 How was it?
     form(method="post" action="/restaurants/:id/comment")
       input(type="hidden" name="_csrf" value=csrfToken)
       div
         textarea(name="comment" rows="18" cols="70")
       div
-        button(type="submit") Submit Comment!  
-    
+        button(type="submit") Submit Comment!
+

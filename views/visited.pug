@@ -1,7 +1,7 @@
 extends layout.pug
 
-block content 
+block content
   h1 Visited Restaurants
     each restaurant in visitedRestaurants
       div
-        a(href=`/restaurant/${restaurant.id}`)= restaurant.name
+        a(href=`/restaurants/${restaurant.id}`)= restaurant.name

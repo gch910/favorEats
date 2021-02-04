@@ -26,6 +26,27 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          comment: "The chicken here is great.",
+          userId: 1,
+          restaurantId: 20,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          comment: "Monday night specials are the best!",
+          userId: 1,
+          restaurantId: 20,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          comment: "The brisket is too dry.",
+          userId: 1,
+          restaurantId: 20,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
