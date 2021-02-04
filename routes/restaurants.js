@@ -94,4 +94,11 @@ router.get(
   })
 );
 
+router.post('/comment', (req, res) => {
+    const { comment } = req.body;
+
+
+    res.json({ comment })
+})
+
 module.exports = router;

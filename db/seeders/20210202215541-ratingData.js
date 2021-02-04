@@ -26,6 +26,27 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date(),
         },
+        {
+          rating: 3,
+          userId: 1,
+          restaurantId: 20,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          rating: 2,
+          userId: 1,
+          restaurantId: 20,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
+        {
+          rating: 5,
+          userId: 1,
+          restaurantId: 20,
+          createdAt: new Date(),
+          updatedAt: new Date(),
+        },
       ],
       {}
     );
