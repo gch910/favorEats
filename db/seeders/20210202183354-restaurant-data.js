@@ -12,7 +12,8 @@ module.exports = {
         city: "Austin",
         state: "TX",
         zipCode: 78704,
-        img: "https://lostinaustin.org/listify/wp-content/uploads/2019/07/blog-lostinaustin-best-of-south-congress-perlas.jpg",
+        img:
+          "https://lostinaustin.org/listify/wp-content/uploads/2019/07/blog-lostinaustin-best-of-south-congress-perlas.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -25,7 +26,8 @@ module.exports = {
         city: "Austin",
         state: "TX",
         zipCode: 78704,
-        img: "https://media.bizj.us/view/img/11097933/home-slice*1024xx604-340-0-23.jpg",
+        img:
+          "https://media.bizj.us/view/img/11097933/home-slice*1024xx604-340-0-23.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -51,7 +53,8 @@ module.exports = {
         city: "Austin",
         state: "TX",
         zipCode: 78702,
-        img: "https://3q87le1gsko01ibim33e4wib-wpengine.netdna-ssl.com/wp-content/uploads/2020/06/franklinbarbecue-21200xx5760-3246-0-592-640x440.jpg",
+        img:
+          "https://3q87le1gsko01ibim33e4wib-wpengine.netdna-ssl.com/wp-content/uploads/2020/06/franklinbarbecue-21200xx5760-3246-0-592-640x440.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -64,7 +67,8 @@ module.exports = {
         city: "Austin",
         state: "TX",
         zipCode: 78703,
-        img: "https://jeffreysofaustin.com/wp-content/uploads/2015/02/JEFFREYS_Austin_04.jpg",
+        img:
+          "https://jeffreysofaustin.com/wp-content/uploads/2015/02/JEFFREYS_Austin_04.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -77,7 +81,8 @@ module.exports = {
         city: "Austin",
         state: "TX",
         zipCode: 78702,
-        img: "https://www.veracruzallnatural.com/wp-content/uploads/2020/06/webberville-1954x1200.png",
+        img:
+          "https://www.veracruzallnatural.com/wp-content/uploads/2020/06/webberville-1954x1200.png",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -90,7 +95,8 @@ module.exports = {
         city: "Austin",
         state: "TX",
         zipCode: 78704,
-        img: "https://res-2.cloudinary.com/dostuff-media/image/upload//c_fill,g_faces,f_auto,w_800/v1551477597/event-poster-10472713.jpg",
+        img:
+          "https://res-2.cloudinary.com/dostuff-media/image/upload//c_fill,g_faces,f_auto,w_800/v1551477597/event-poster-10472713.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -116,7 +122,8 @@ module.exports = {
         city: "Greenacres",
         state: "FL",
         zipCode: 33467,
-        img: "https://media-cdn.tripadvisor.com/media/photo-s/0c/d7/f5/0f/eagle-grill.jpg",
+        img:
+          "https://media-cdn.tripadvisor.com/media/photo-s/0c/d7/f5/0f/eagle-grill.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -129,7 +136,8 @@ module.exports = {
         city: "Coral Springs",
         state: "FL",
         zipCode: 33071,
-        img: "https://floridabeerblog.files.wordpress.com/2014/06/wpid-20140530_202353.jpg",
+        img:
+          "https://floridabeerblog.files.wordpress.com/2014/06/wpid-20140530_202353.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -142,7 +150,8 @@ module.exports = {
         city: "Tampa",
         state: "FL",
         zipCode: 33606,
-        img: "https://media.bizj.us/view/img/10420602/ft4a0194*1200xx5375-3026-0-179.jpg",
+        img:
+          "https://media.bizj.us/view/img/10420602/ft4a0194*1200xx5375-3026-0-179.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -155,7 +164,8 @@ module.exports = {
         city: "Lantana",
         state: "FL",
         zipCode: 33462,
-        img: "https://floridabeerblog.files.wordpress.com/2014/06/wpid-20140530_202353.jpg",
+        img:
+          "https://zagat-photos.imgix.net/ChIJqSZjQwHZ2IgRchlF4a-XR38/ad5bb38f49524c8e3119fa1e98a8c2ca.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -168,7 +178,8 @@ module.exports = {
         city: "Milwaukee",
         state: "WI",
         zipCode: 53211,
-        img: "https://cafehollander.com/wp-content/uploads/2017/05/hollander-3.jpg",
+        img:
+          "https://cafehollander.com/wp-content/uploads/2017/05/hollander-3.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -181,7 +192,8 @@ module.exports = {
         city: "Milwaukee",
         state: "WI",
         zipCode: 53211,
-        img: "https://images.happycow.net/venues/1024/45/65/hcmp45657_424844.jpeg",
+        img:
+          "https://images.happycow.net/venues/1024/45/65/hcmp45657_424844.jpeg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -194,7 +206,8 @@ module.exports = {
         city: "Milwaukee",
         state: "WI",
         zipCode: 53211,
-        img: "https://cdn.usarestaurants.info/assets/uploads/fd78e490b008c2838227e86fc2046beb_-united-states-wisconsin-milwaukee-county-milwaukee-centro-cafe-414-455-3751htm.jpg",
+        img:
+          "https://cdn.usarestaurants.info/assets/uploads/fd78e490b008c2838227e86fc2046beb_-united-states-wisconsin-milwaukee-county-milwaukee-centro-cafe-414-455-3751htm.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -207,7 +220,8 @@ module.exports = {
         city: "Milwaukee",
         state: "WI",
         zipCode: 53211,
-        img: "https://milwaukeerecord.com/wp-content/uploads/2017/08/kopps1.jpg",
+        img:
+          "https://milwaukeerecord.com/wp-content/uploads/2017/08/kopps1.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -220,7 +234,8 @@ module.exports = {
         city: "Milwaukee",
         state: "WI",
         zipCode: 53211,
-        img:  "https://www.beansandbarley.com/wp-content/uploads/2018/03/BeansExterior1-edit-1.jpg",
+        img:
+          "https://www.beansandbarley.com/wp-content/uploads/2018/03/BeansExterior1-edit-1.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -233,7 +248,8 @@ module.exports = {
         city: "Chicago",
         state: "Il",
         zipCode: 60618,
-        img: "https://media1.fdncms.com/chicago/imager/honey-butter-fried-chicken/u/zoom/11301780/honeybutter.jpg",
+        img:
+          "https://media1.fdncms.com/chicago/imager/honey-butter-fried-chicken/u/zoom/11301780/honeybutter.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -246,7 +262,8 @@ module.exports = {
         city: "Chicago",
         state: "Il",
         zipCode: 60646,
-        img: "https://cdn.vox-cdn.com/thumbor/zx-gLX0YYKjCT1-WC0SUdak3xxU=/0x0:3500x2118/1200x0/fi[…]uploads/chorus_asset/file/19819287/blb23327_49672830403_o.jpg",
+        img:
+          "https://cdn.vox-cdn.com/thumbor/zx-gLX0YYKjCT1-WC0SUdak3xxU=/0x0:3500x2118/1200x0/filters:focal(0x0:3500x2118):no_upscale()/cdn.vox-cdn.com/uploads/chorus_asset/file/19819287/blb23327_49672830403_o.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -259,7 +276,8 @@ module.exports = {
         city: "Chicago",
         state: "Il",
         zipCode: 60641,
-        img: "https://cdn.vox-cdn.com/thumbor/vQaqHEwWRl7wi_VjlKWwTcWjGf4=/0x0:1000x667/1200x800/f[…]s/chorus_image/image/62842059/6945953682_b5dc73bcc6_b.0.0.jpg",
+        img:
+          "https://cdn.vox-cdn.com/thumbor/vQaqHEwWRl7wi_VjlKWwTcWjGf4=/0x0:1000x667/1200x800/filters:focal(420x254:580x414)/cdn.vox-cdn.com/uploads/chorus_image/image/62842059/6945953682_b5dc73bcc6_b.0.0.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -272,7 +290,8 @@ module.exports = {
         city: "Chiacgo",
         state: "Il",
         zipCode: 60618,
-        img: "https://zagat-photos.imgix.net/ChIJMZ6CO4XND4gRfdN0r9Ojzg4/a2c20fb0c993960910d1ac2e83e8d125.jpg",
+        img:
+          "https://zagat-photos.imgix.net/ChIJMZ6CO4XND4gRfdN0r9Ojzg4/a2c20fb0c993960910d1ac2e83e8d125.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -285,7 +304,8 @@ module.exports = {
         city: "Chiacgo",
         state: "Il",
         zipCode: 60642,
-        img: "https://d253b1eioa5z7b.cloudfront.net/venue_images/medium_241c2873-7be7-49c5-9ed9-f975e3edb803.jpg",
+        img:
+          "https://d253b1eioa5z7b.cloudfront.net/venue_images/medium_241c2873-7be7-49c5-9ed9-f975e3edb803.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -298,7 +318,8 @@ module.exports = {
         city: "Chicago",
         state: "Il",
         zipCode: 60661,
-        img: "https://lh3.googleusercontent.com/proxy/kK5xGWkk7Ieh03adpsPPBp4pCKAWEKbMSb3xZR0yfDEqJl_-pi8N30mM_0Y1uaomNPY0u9C0lY94kbqlRt9r6DBtljQVpHnIag",
+        img:
+          "https://lh3.googleusercontent.com/proxy/kK5xGWkk7Ieh03adpsPPBp4pCKAWEKbMSb3xZR0yfDEqJl_-pi8N30mM_0Y1uaomNPY0u9C0lY94kbqlRt9r6DBtljQVpHnIag",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
