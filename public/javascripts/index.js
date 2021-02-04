@@ -1,9 +1,8 @@
 const commentForm = document.querySelector(".comment-form");
 const commentDiv = document.getElementById("all-comments")
-
+const userComment = document.querySelector(".user-comment")
 document.addEventListener("DOMContentLoaded", async (event) => {
   commentForm.addEventListener("submit", async (e) => {
-    console.log('hello!')
     e.preventDefault();
     const formData = new FormData(commentForm);
     console.log("target", e.target)
@@ -11,8 +10,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     const token = formData.get("_csrf")
     const body = { 
       comment: userComment,
-      restaurantId: e.target.id
-   } 
+      restaurantId: e.target.id,
+   }
+   
     try {
       console.log("inside try")
       const res = await fetch("http://localhost:8080/restaurants/comment", {
@@ -41,4 +41,5 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       console.log(err);
     }
   });
+  
 });

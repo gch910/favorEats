@@ -81,15 +81,16 @@ router.get(
     // console.log(users[0].Comments)
     const restaurantComments = restaurant.Comments; //[0].comment
     const restaurantRatings = restaurant.Ratings;
-    let totalRating = 0;
-    let counter = 0;
-    restaurantRatings.forEach((eachRating) => {
-      counter++;
-      totalRating += eachRating.rating;
-    });
+    // let totalRating = 0;
+    // let counter = 0;
+    // restaurantRatings.forEach((eachRating) => {
+    //   counter++;
+    //   const parsedRating = parseInt(eachRating.rating, 10);
+    //   totalRating += parsedRating
+    // });
 
-    const average = Math.floor(totalRating / counter);
-    console.log(average);
+    // const restaurantRating = Math.floor(totalRating / counter);
+    // console.log(restaurantRatings[0].rating)
 
     res.render("current-restaurant", {
       restaurant,

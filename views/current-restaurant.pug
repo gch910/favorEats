@@ -9,7 +9,7 @@ block content
     div=restaurant.city
     div=restaurant.state
     div=restaurant.zipCode
-    div
+    div= restaurantRating
       img(src=restaurant.img)
     div(id="all-comments")
       each comment in restaurantComments
@@ -17,7 +17,7 @@ block content
     h1 How was it?
     form(method="post" action="/restaurants/comment" id=restaurant.id class="comment-form")
       div
-        textarea(name="comment" rows="18" cols="70")
+        textarea(name="comment" rows="18" cols="70" class="user-comment")
       div
         button(type="submit" class="form-button") Submit Comment
     script(src="/javascripts/index.js")
