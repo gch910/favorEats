@@ -66,14 +66,19 @@ router.get(
 router.get(
   "/:id",
   requireAuth,
-  csrfProtection,
   asyncHandler(async (req, res) => {
-    const user = db.User.build();
+    const userId = req.session.auth.userId
+    const notSure = db.User.build();
     const restaurantId = req.params.id;
     const restaurant = await db.Restaurant.findByPk(restaurantId, {
-      include: [db.Comment, db.Rating],
+      include: [db.Comment, db.Rating]
     });
 
+    // const users = await db.User.findAll({
+    //   include: db.Comment
+    // })
+    
+    // console.log(users[0].Comments)
     const restaurantComments = restaurant.Comments; //[0].comment
     const restaurantRatings = restaurant.Ratings;
     let totalRating = 0;
@@ -83,7 +88,7 @@ router.get(
       totalRating += eachRating.rating;
     });
 
-    const average = Math.round(totalRating / counter, 1);
+    const average = Math.floor(totalRating / counter);
     console.log(average);
 
     res.render("current-restaurant", {
@@ -94,20 +99,20 @@ router.get(
   })
 );
 
-router.post('/comment', csrfProtection, asyncHandler(async (req, res) => {
+router.post('/comment', asyncHandler(async (req, res) => {
     const { comment, restaurantId } = req.body;
     const userId = req.session.auth.userId;
-    const parsedRestId = parseInt(restaurantId, 10)
+
     // const parsedUserId = parseInt(userId, 10)
 
-    // const userComment = await db.Comment.create({
-    //   comment,
-    //   parsedRestId,
-    //   userId,
-    // })
+    const userComment = await db.Comment.create({
+      comment,
+      restaurantId,
+      userId,
+    })
    
     console.log("inside router")
-    res.json({ response: userComment })
+    res.json({ comment, restaurantId })
 }))
 
 module.exports = router;
