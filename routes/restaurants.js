@@ -94,11 +94,15 @@ router.get(
   })
 );
 
-// router.post('/comment', async (req, res) => {
-//     const { comment } = req.body;
+router.post('/comment', async (req, res) => {
+    const { comment } = req.body;
 
-
-//     await res.json({ comment })
-// })
+    // const userComment = await db.Comment.create({
+      
+    // })
+    console.log(comment)
+    console.log("inside router")
+    res.json({ comment })
+})
 
 module.exports = router;

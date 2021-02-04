@@ -4,27 +4,28 @@ document.addEventListener("DOMContentLoaded", async (event) => {
   const commentForm = document.querySelector(".comment-form");
   commentForm.addEventListener("submit", async (e) => {
     console.log('hello!')
-    // e.preventDefault();
+    e.preventDefault();
     const formData = new FormData(commentForm);
-
+    console.log(e.target.id)
     const userComment = formData.get("comment");
 
-    const body = { userComment }
+    const body = { comment: userComment } 
     try {
-      const comment = await fetch("http://localhost:8080/restaurants/comment", {
+      console.log("inside try")
+      const res = await fetch("http://localhost:8080/restaurants/comment", {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
           "Content-Type": "application/json",
         }
       });
-
+      console.log("-------")
       if (!res.ok) {
         throw res;
       }
 
       // window.location.href = '/'
-      const json = await comment.json();
+      const json = await res.json();
 
       console.log(json);
     } catch (err) {
