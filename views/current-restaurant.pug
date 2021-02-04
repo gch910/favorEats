@@ -9,8 +9,10 @@ block content
     div=restaurant.city
     div=restaurant.state
     div=restaurant.zipCode
-    //- each comment in restaurantComments
-    //-   div= comment.comment
+    div
+      img(src=restaurant.img)
+    each comment in restaurantComments
+      div= comment.comment
     //- div= restaurantRatings[0].rating
     h1 How was it?
     form(method="post" action="/restaurants/comment" id=restaurant.id class="comment-form")

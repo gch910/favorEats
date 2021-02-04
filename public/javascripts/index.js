@@ -9,7 +9,10 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     console.log(e.target.id)
     const userComment = formData.get("comment");
 
-    const body = { comment: userComment } 
+    const body = { 
+      comment: userComment,
+      restaurantId: e.target.id
+   } 
     try {
       console.log("inside try")
       const res = await fetch("http://localhost:8080/restaurants/comment", {
@@ -23,10 +26,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       if (!res.ok) {
         throw res;
       }
-
+      
       // window.location.href = '/'
       const json = await res.json();
-
       console.log(json);
     } catch (err) {
       console.log(err);

@@ -94,15 +94,20 @@ router.get(
   })
 );
 
-router.post('/comment', async (req, res) => {
-    const { comment } = req.body;
+router.post('/comment', csrfProtection, asyncHandler(async (req, res) => {
+    const { comment, restaurantId } = req.body;
+    const userId = req.session.auth.userId;
+    const parsedRestId = parseInt(restaurantId, 10)
+    // const parsedUserId = parseInt(userId, 10)
 
     // const userComment = await db.Comment.create({
-      
+    //   comment,
+    //   parsedRestId,
+    //   userId,
     // })
-    console.log(comment)
+   
     console.log("inside router")
-    res.json({ comment })
-})
+    res.json({ response: userComment })
+}))
 
 module.exports = router;
