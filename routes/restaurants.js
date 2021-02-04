@@ -94,11 +94,11 @@ router.get(
   })
 );
 
-router.post('/comment', (req, res) => {
-    const { comment } = req.body;
+// router.post('/comment', async (req, res) => {
+//     const { comment } = req.body;
 
 
-    res.json({ comment })
-})
+//     await res.json({ comment })
+// })
 
 module.exports = router;
