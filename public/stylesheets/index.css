@@ -113,14 +113,6 @@ body {
   margin-right: 210px;
 }
 
-.nav a {
-  color: #382110;
-  text-decoration: none;
-}
-.nav a:hover {
-  color: #f4f1ea;
-}
-
 .nav_list li {
   display: flex;
   align-items: center;
@@ -131,10 +123,24 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+.nav_list li a {
+  color: #382110;
+  text-decoration: none;
+}
+
 .nav_list li:hover {
   background-color: #382110;
-  color: #f4f1ea;
+  text-decoration: none;
   cursor: pointer;
+}
+
+.nav_list li:hover a {
+  color: #f4f1ea;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav a:hover {
+  color: #f4f1ea;
 }
 
 .nav_search {
@@ -211,6 +217,8 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
 }
+
+/* for smaller screens */
 @media screen and (max-width: 1500px) {
   #form-header {
     display: flex;
@@ -266,6 +274,22 @@ body {
     color: #6d6d6d;
     border-radius: 2em;
   }
+  #demo-button {
+    height: 50px;
+    width: 90px;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(207, 207, 207);
+    color: #6d6d6d;
+    border-radius: 2em;
+  }
+
+  #demo-button:hover {
+    background-color: #382110;
+    cursor: pointer;
+  }
 
   #login-button:hover {
     background-color: #382110;
@@ -287,4 +311,106 @@ body {
     font-size: 20px;
     margin: 2px;
   }
+}
+#demo-button {
+  height: 50px;
+  width: 90px;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: rgb(207, 207, 207);
+  color: #6d6d6d;
+  border-radius: 2em;
+}
+
+#demo-button:hover {
+  background-color: #382110;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  background-color: #382110;
+  cursor: pointer;
+}
+
+/* CSS FOR INDIVIDUAL RESTAURANT PAGES */
+
+#restaurant-name {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+#restaurant-category {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: blue;
+  font-size: 30px;
+}
+
+#restaurant-description {
+  display: flex;
+  text-align: center;
+  justify-content: left;
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+#restaurant-img {
+  display: flex;
+  text-align: center;
+  margin-top: 2%;
+  margin-left: 10%;
+}
+
+#restaurant-streetAddress {
+  display: flex;
+  text-align: center;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+#restaurant-city {
+  display: flex;
+  text-align: center;
+  font-size: 16px;
+}
+
+#restaurant-state {
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+}
+
+#restaurant-zipCode {
+  display: flex;
+  text-align: center;
+  font-size: 12px;
+}
+
+#restaurant-rating {
+  display: flex;
+  text-align: center;
+}
+
+#all-comments {
+  display: flex;
+  text-align: center;
+}
+
+.all-comments #comment {
+  border: 2px solid #3a3a3a;
+  margin: 5% 37% 40% 37%;
+  padding-bottom: 2%;
+  border-radius: 3em;
+}
+#comment {
+  display: flex;
+  text-align: center;
+  overflow: scroll;
 }
