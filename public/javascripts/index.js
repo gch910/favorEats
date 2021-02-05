@@ -7,10 +7,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     const formData = new FormData(commentForm);
     console.log("target", e.target)
     const userComment = formData.get("comment");
-    const token = formData.get("_csrf")
+    const userRating = formData.get("rate");
     const body = { 
       comment: userComment,
       restaurantId: e.target.id,
+      rating: userRating
    }
    
     try {
@@ -32,6 +33,17 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       
       // window.location.href = '/'
       const json = await res.json();
+
+    // let totalRating = 0;
+    // let counter = 0;
+    // restaurantRatings.forEach((eachRating) => {
+    //   counter++;
+    //   const parsedRating = parseInt(eachRating.rating, 10);
+    //   totalRating += parsedRating
+    // });
+    // const restaurantRating = Math.floor(totalRating / counter);
+
+      console.log(json)
       const newCommentDiv = document.createElement('div');
       const comment = document.createTextNode(json.comment)
       newCommentDiv.appendChild(comment)

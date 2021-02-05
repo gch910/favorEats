@@ -81,15 +81,7 @@ router.get(
     // console.log(users[0].Comments)
     const restaurantComments = restaurant.Comments; //[0].comment
     const restaurantRatings = restaurant.Ratings;
-    // let totalRating = 0;
-    // let counter = 0;
-    // restaurantRatings.forEach((eachRating) => {
-    //   counter++;
-    //   const parsedRating = parseInt(eachRating.rating, 10);
-    //   totalRating += parsedRating
-    // });
-
-    // const restaurantRating = Math.floor(totalRating / counter);
+    
     // console.log(restaurantRatings[0].rating)
 
     res.render("current-restaurant", {
@@ -101,10 +93,39 @@ router.get(
 );
 
 router.post('/comment', asyncHandler(async (req, res) => {
-    const { comment, restaurantId } = req.body;
+    const { comment, restaurantId, rating } = req.body;
     const userId = req.session.auth.userId;
 
     // const parsedUserId = parseInt(userId, 10)
+    const userRating = await db.Rating.create({
+      rating,
+      restaurantId,
+      userId,
+    })
+
+    const allRatings = await db.Rating.findAll({
+      where: {
+        restaurantId,
+      }
+    })
+
+    const ratings = allRatings.map(rating => {
+      if(rating.rating) {
+        return rating.rating
+      }})
+    let totalRating = 0;
+    let counter = 0;
+    ratings.forEach((rating) => {
+      counter++;
+      const parsedRating = parseInt(rating, 10)
+      if(rating !== undefined) {
+        totalRating += parsedRating
+      }
+     
+    });
+    const restaurantRating = Math.floor(totalRating / counter)
+    console.log(restaurantRating)
+    
 
     const userComment = await db.Comment.create({
       comment,
@@ -113,7 +134,7 @@ router.post('/comment', asyncHandler(async (req, res) => {
     })
    
     console.log("inside router")
-    res.json({ comment, restaurantId })
+    res.json({ comment, restaurantId, rating })
 }))
 
 module.exports = router;

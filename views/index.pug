@@ -9,21 +9,24 @@ append head
 block content
   h1 Welcome, #{currentUser.username}
   h2 Visited Restaurants
-    //- each restaurant in visitedRestaurants
-    //-   div
-    //-     a(href='/restaurants/:id')= restaurant.name
-    - var n = 0;
-    while n < 3
-      - ++n
-      div
-         a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+    if visitedRestaurants.length
+      - var n = 0;
+      while n < 3
+        - ++n
+        div
+          a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+    else
+      p You have no visited restaurants yet!
 
   h2 Want To Visit
-    - var n = 0;
-    while n < 3
-      - ++n
-      div
-        a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+    if wantToVisit.length
+      - var n = 0;
+      while n < 3
+        - ++n
+        div
+          a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+    else
+      p You have no restaurants in your want to visit list! :)
   div
     h2 Top Rated Restaurants
       each restaurant in highestRated
