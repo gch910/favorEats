@@ -4,11 +4,10 @@ block content
 
   h1= restaurant.name
     div Category: #{restaurant.category}
-    div=restaurant.description
-    div=restaurant.streetAdress
-    div=restaurant.city
-    div=restaurant.state
-    div=restaurant.zipCode
+    div About: #{restaurant.description}
+    div Location:
+    p #{restaurant.streetAddress} 
+    p #{restaurant.city} #{restaurant.state}, #{restaurant.zipCode}
     div= restaurantRating
       img(src=restaurant.img width="500px" height="350px")
     div(id="all-comments")
