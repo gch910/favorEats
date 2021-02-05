@@ -8,13 +8,27 @@ block content
     div Location:
     p #{restaurant.streetAddress} 
     p #{restaurant.city} #{restaurant.state}, #{restaurant.zipCode}
-    div= restaurantRating
+    div
       img(src=restaurant.img width="500px" height="350px")
+    div(id="total-rating")
+      if restaurantRating === 5
+        p ⭐⭐⭐⭐⭐
+      if restaurantRating === 4
+        p ⭐⭐⭐⭐
+      if restaurantRating === 3
+        p ⭐⭐⭐
+      if restaurantRating === 2
+        p ⭐⭐
+      if restaurantRating === 1
+        p ⭐
+      if restaurantRating === 0
+        p There are no ratings for this restaurant
+      
     div(id="all-comments")
       each comment in restaurantComments
-        div= comment.comment
+        div #{usersArray[comment.userId - 1]}: #{comment.comment}
     h1 How was it?
-    form(method="post" action="/restaurants/comment" id=restaurant.id class="comment-form")
+    form(method="post" action="/restaurants/comment" id=restaurant.id class="comment-form")                       
       div
         input(type="radio" name="rate" id="star5" value="1")
         input(type="radio" name="rate" id="star4" value="2")
@@ -22,7 +36,7 @@ block content
         input(type="radio" name="rate" id="star2" value="4")
         input(type="radio" name="rate" id="star1" value="5")
       div
-        textarea(name="comment" rows="18" cols="70" class="user-comment")
+        textarea(name="comment" rows="18" cols="70" class="user-comment" required)
       div
         button(type="submit" class="form-button") Submit Comment
     script(src="/javascripts/index.js")

@@ -74,20 +74,47 @@ router.get(
       include: [db.Comment, db.Rating]
     });
 
-    // const users = await db.User.findAll({
-    //   include: db.Comment
-    // })
+    const allRatings = await db.Rating.findAll({
+      where: {
+        restaurantId,
+      }
+    })
+
+    const users = await db.User.findAll()
+    const usersArray = []
+    users.forEach(user => {
+      usersArray.push(user.username)
+    })
+    // console.log(usersArray)
+
+    const ratings = allRatings.map(rating => {
+      if(rating.rating) {
+        return rating.rating
+      }})
+    let totalRating = 0;
+    let counter = 0;
+    ratings.forEach((rating) => {
+      counter++;
+      const parsedRating = parseInt(rating, 10)
+      if(rating !== undefined) {
+        totalRating += parsedRating
+      }
+     
+    });
+    const restaurantRating = Math.floor(totalRating / counter)
     
-    // console.log(users[0].Comments)
+
     const restaurantComments = restaurant.Comments; //[0].comment
     const restaurantRatings = restaurant.Ratings;
-    
+    // console.log(restaurantComments[0].userId)
     // console.log(restaurantRatings[0].rating)
-
+   
     res.render("current-restaurant", {
       restaurant,
       restaurantComments,
       restaurantRatings,
+      restaurantRating,
+      usersArray
     });
   })
 );
@@ -109,6 +136,8 @@ router.post('/comment', asyncHandler(async (req, res) => {
       }
     })
 
+    const user = await db.User.findByPk(userId)
+    console.log(user.username)
     const ratings = allRatings.map(rating => {
       if(rating.rating) {
         return rating.rating
@@ -124,7 +153,6 @@ router.post('/comment', asyncHandler(async (req, res) => {
      
     });
     const restaurantRating = Math.floor(totalRating / counter)
-    console.log(restaurantRating)
     
 
     const userComment = await db.Comment.create({
@@ -134,7 +162,7 @@ router.post('/comment', asyncHandler(async (req, res) => {
     })
    
     console.log("inside router")
-    res.json({ comment, restaurantId, rating })
+    res.json({ comment, restaurantId, rating, restaurantRating, user })
 }))
 
 module.exports = router;

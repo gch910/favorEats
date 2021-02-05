@@ -1,6 +1,7 @@
 const commentForm = document.querySelector(".comment-form");
 const commentDiv = document.getElementById("all-comments")
 const userComment = document.querySelector(".user-comment")
+const totalRating = document.getElementById("total-rating")
 document.addEventListener("DOMContentLoaded", async (event) => {
   commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -43,9 +44,14 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     // });
     // const restaurantRating = Math.floor(totalRating / counter);
 
+    if(json.restaurantRating === 5) totalRating.innerHTML = "⭐⭐⭐⭐⭐"
+    if(json.restaurantRating === 4) totalRating.innerHTML = "⭐⭐⭐⭐"
+    if(json.restaurantRating === 3) totalRating.innerHTML = "⭐⭐⭐"
+    if(json.restaurantRating === 2) totalRating.innerHTML = "⭐⭐"
+    if(json.restaurantRating === 1) totalRating.innerHTML = "⭐"
       console.log(json)
       const newCommentDiv = document.createElement('div');
-      const comment = document.createTextNode(json.comment)
+      const comment = document.createTextNode(`${json.user.username}: ${json.comment}`)
       newCommentDiv.appendChild(comment)
       commentDiv.appendChild(newCommentDiv)
 
