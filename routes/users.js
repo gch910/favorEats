@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const { check, validationResult } = require("express-validator");
 const { requireAuth } = require("../auth");
-const { loginUser, logoutUser } = require("../auth");
+const { loginUser, logoutUser, loginDemoUser } = require("../auth");
 const { csrfProtection, asyncHandler } = require("./utils");
 const db = require("../db/models");
 
@@ -143,6 +143,13 @@ router.get("/logout", (req, res) => {
   res.redirect("/users/login");
 });
 
-
+router.post(
+  "/login/demo",
+  asyncHandler(async (req, res) => {
+    
+    loginDemoUser();
+    return res.redirect("/");
+  })
+);
 
 module.exports = router;
