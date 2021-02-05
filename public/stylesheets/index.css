@@ -347,12 +347,13 @@ body {
   font-size: 70px;
   font-weight: bold;
   margin-top: 30px;
+  color: #382110;
 }
 #restaurant-category {
   display: flex;
   text-align: center;
   justify-content: center;
-  color: blue;
+  color: #382110;
   font-size: 30px;
 }
 
@@ -363,6 +364,7 @@ body {
   font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #382110;
 }
 
 #restaurant-img {
@@ -376,12 +378,12 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
-  margin-top: 2%;
+  margin-top: 1%;
   font-weight: bold;
-  font-size: 16px;
-  color: green;
+  font-size: 24px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #382110;
 }
 
 #restaurant-city {
@@ -391,6 +393,7 @@ body {
   font-size: 20px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #382110;
 }
 
 #restaurant-state {
@@ -400,6 +403,7 @@ body {
   font-size: 16px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #382110;
 }
 
 #restaurant-zipCode {
@@ -409,6 +413,7 @@ body {
   font-size: 16px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  color: #382110;
 }
 
 .form-button {
@@ -439,31 +444,80 @@ body {
   text-align: center;
 } */
 
+/*  box of comments after a use has posted them */
 .all-comments {
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
   width: 500px;
   height: 200px;
   overflow: scroll;
+  background-color: rgb(240, 240, 240);
+  outline: none;
 }
 
 #comments-header {
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
-  font-size: 25git px;
+  font-size: 30px;
+  color: #382110;
 }
+
+/* the actual comment */
 #comment {
   font-size: 18px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   padding: 1px;
-  color: darkslategray;
+  color: rgb(42, 44, 44);
 }
 
+/* font for the 'how was it? leave a rating' portion */
 #rate-it {
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
   font-size: 20px;
+  color: #382110;
+}
+
+/* text box for leaving a comment */
+.user-comment {
+  border: 2px solid #3a3a3a;
+  padding-bottom: 2%;
+  width: 500px;
+  height: 200px;
+  overflow: scroll;
+  background-color: rgb(240, 240, 240);
+  outline: none;
+}
+
+/* CSS FOR THE SUBPAGES - WANT TO, VISITED, AND BROWSE */
+.restaurant-subpage h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  color: #382110;
+}
+
+.restaurant-subpage div {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #382110;
+}
+
+.restaurant-subpage h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  color: #382110;
 }

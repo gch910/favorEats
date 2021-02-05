@@ -1,10 +1,12 @@
 extends layout.pug
 
 block content
-  h1 Visited Restaurants
-    each restaurant in visitedRestaurants
-      div
-        a(href=`/restaurants/${restaurant.id}`)= restaurant.name
-      div
-        img(src=restaurant.img width="100px" height="100px")
-        
+  .restaurant-subpage
+    h1 Visited Restaurants
+    h2 Check out all of the restaurants that you have visited!
+      each restaurant in visitedRestaurants
+        div
+          a(href=`/restaurants/${restaurant.id}`)= restaurant.name
+        div
+          img(src=restaurant.img width="100px" height="100px")
+
