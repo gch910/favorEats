@@ -12,10 +12,11 @@ block content
     div(id="restaurant-state")=restaurant.state
       div(id="restaurant-zipCode") , #{restaurant.zipCode}
     div(id="restaurant-rating")= restaurantRating
+    div(id="comments-header") Comments:
     div.all-comments
       each comment in restaurantComments
         div(id="comment")= comment.comment
-    div(id="rate-it") How was it?
+    div(id="rate-it") How was it? Rate and comment below!
     form(method="post" action="/restaurants/comment" id=restaurant.id class="comment-form")
       div
         input(type="radio" name="rate" id="star5" value="1")
