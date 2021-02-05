@@ -7,26 +7,26 @@ append head
   script(src="/javascripts/index.js" type="module" defer)
 
 block content
-  h1 Welcome, #{currentUser.username}
-  h2 Visited Restaurants
-    //- each restaurant in visitedRestaurants
-    //-   div
-    //-     a(href='/restaurants/:id')= restaurant.name
-    - var n = 0;
-    while n < 3
-      - ++n
-      div
-         a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+  div(id="welcome_message")
+    h1 Welcome, #{currentUser.username}!
+  .content-blocks
+    div(id="visited_grid")
+      h2 Visited Restaurants:
+        - var n = 0;
+        while n < 3
+          - ++n
+          div
+            a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
 
-  h2 Want To Visit
-    - var n = 0;
-    while n < 3
-      - ++n
-      div
-        a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
-  div
-    h2 Top Rated Restaurants
-      each restaurant in highestRated
-        div
-          a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
-
+    div(id="wanted_grid")
+      h2 Want To Visit:
+        - var n = 0;
+        while n < 3
+          - ++n
+          div
+            a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+    div(id="top_restaurants")
+      h2 Top Rated Restaurants:
+         each restaurant in highestRated
+          div
+            a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
