@@ -4,13 +4,30 @@ html
     block head
       title="Express Starter App"
       link(rel='stylesheet' href='/stylesheets/index.css')
+      link(rel='stylesheet' href='/stylesheets/navbar.css')
   body
-    div(class="navbar")
-      nav
-        img(src='/media/logos/goodreads.png' width="100px")
-        a(href='/') Home
-        a(href='/restaurants/visited') Visited Restaurants
-        a(href='/restaurants/want-to-visit') Want to Visit
-        a(href='/restaurants') Browse
-        input(type="text")
+    .nav
+      .nav_container
+        .nav_logo
+          a(href='/')
+            img(src='/media/logos/goodreads.png' width="100px")
+        ul.nav_list
+          li
+            a(href='/') Home
+          li
+            a(href='/restaurants/visited') Visited Restaurants
+          li
+            a(href='/restaurants/want-to-visit') Want to Visit
+          li
+            a(href='/restaurants') Browse
+        .nav_search
+          input(type="search" placeholder="Search")
+    //- div(class="navbar")
+    //-   nav
+    //-     img(src='/media/logos/goodreads.png' width="100px")
+    //-     a(href='/') Home
+    //-     a(href='/restaurants/visited') Visited Restaurants
+    //-     a(href='/restaurants/want-to-visit') Want to Visit
+    //-     a(href='/restaurants') Browse
+    //-     input(type="text")
   block content

@@ -71,20 +71,161 @@ body {
   border-radius: 2em;
 }
 
-a:link {
+/* a:link {
   color: #b5e2fa;
   font-family: "Quicksand", sans-serif;
   text-align: center;
   margin-left: 12%;
-}
+} */
 
-a:visited {
+/* a:visited {
   color: #0fa3b1;
-}
+} */
 
-a.want-to-visit-links {
+/* a.want-to-visit-links {
   color: green;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   text-align: center;
   margin-left: 5%;
+} */
+
+.nav {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(189, 189, 184);
+}
+
+.nav_list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.nav_container {
+  display: flex;
+  justify-content: space-between;
+  width: 1220px;
+  height: 50px;
+}
+
+.nav_list li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: black;
+  /* background-color: rgb(189, 189, 184); */
+  font-family: "Quicksand", sans-serif;
+  width: 25%;
+}
+
+.nav_list li:hover {
+  background-color: black;
+  color: white;
+  cursor: pointer;
+}
+
+.nav_search {
+  display: flex;
+  align-items: center;
+}
+
+.nav_logo img {
+  width: 140px;
+  height: 50px;
+  object-fit: cover;
+}
+
+#welcome_message  {
+  display: flex;
+  justify-content: center;
+}
+#visited_grid  {
+  display: flex;
+  justify-content: center;
+}
+#wanted_grid  {
+  display: flex;
+  justify-content: center;
+}
+#top_restaurants {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+
+
+@media screen and (max-width: 1500px) {
+  #form-header {
+    display: flex;
+    justify-content: center;
+    font-family: "Sofia", sans-serif;
+    font-size: 40px;
+    color: #b5e2fa;
+    text-decoration: underline rgb(199, 197, 197);
+  }
+  /* border around the sign in box */
+  .form-container {
+    border: none;
+    /* margin: 5% 37% 40% 37%;
+    padding-bottom: 2%;
+    border-radius: 3em; */
+  }
+  .input-field {
+    font-size: 20px;
+    font-family: "Quicksand", sans-serif;
+    color: #3a3a3a;
+    height: 50px;
+    width: 350px;
+    text-align: center;
+    border-radius: 0.7em;
+  }
+  
+  .form-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .input-div {
+    padding: 5px;
+  }
+  
+  .button-div {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    padding-top: 5%;
+    margin-bottom: 5%;
+  }
+
+  #login-button {
+    height: 50px;
+    width: 90px;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(207, 207, 207);
+    color: #6d6d6d;
+    border-radius: 2em;
+  }
+  
+  #signup-button {
+    height: 50px;
+    width: 150px;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(207, 207, 207);
+    color: #6d6d6d;
+    border-radius: 2em;
+  }
+  .navbar a:link {
+    font-size: 20px;
+    margin: 2px;
+  }
 }
