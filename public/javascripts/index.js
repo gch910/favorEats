@@ -1,5 +1,5 @@
 const commentForm = document.querySelector(".comment-form");
-const commentDiv = document.getElementById("all-comments");
+const commentDiv = document.querySelector(".all-comments");
 const userComment = document.querySelector(".user-comment");
 const totalRating = document.getElementById("total-rating");
 const addVisited = document.querySelector(".add-visited");
@@ -51,6 +51,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       if (json.restaurantRating === 1) totalRating.innerHTML = "⭐";
       console.log(json);
       const newCommentDiv = document.createElement("div");
+      newCommentDiv.id = "comment"
       const comment = document.createTextNode(
         `${json.user.username}: ${json.comment}`
       );

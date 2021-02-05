@@ -57,6 +57,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 #signup-button {
@@ -69,6 +70,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 /* a:link {
@@ -99,8 +101,8 @@ body {
 }
 
 .nav_logo img {
-  width: 140px;
-  height: 50px;
+  width: 200px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -109,16 +111,8 @@ body {
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  width: 600px;
+  width: 700px;
   margin-right: 210px;
-}
-
-.nav a {
-  color: #382110;
-  text-decoration: none;
-}
-.nav a:hover {
-  color: #f4f1ea;
 }
 
 .nav_list li {
@@ -131,10 +125,24 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+.nav_list li a {
+  color: #382110;
+  text-decoration: none;
+}
+
 .nav_list li:hover {
   background-color: #382110;
-  color: #f4f1ea;
+  text-decoration: none;
   cursor: pointer;
+}
+
+.nav_list li:hover a {
+  color: #f4f1ea;
+  text-decoration: none;
+  cursor: pointer;
+}
+.nav a:hover {
+  color: #f4f1ea;
 }
 
 .nav_search {
@@ -157,19 +165,22 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 #logout-button:hover {
   background-color: #382110;
+  color: #f4f1ea;
   cursor: pointer;
 }
 
 #welcome_message {
   display: flex;
   text-align: left;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Dancing Script", cursive;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 40px;
+  color: #382110;
 }
 .content-blocks {
   display: grid;
@@ -181,6 +192,11 @@ body {
   grid-column-start: 1;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  color: #382110;
+}
+#visited_grid img {
+  width: 100px;
+  height: 100px;
 }
 
 #wanted_grid {
@@ -188,12 +204,24 @@ body {
   grid-column-start: 2;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  color: #382110;
 }
+
+#wanted_grid img {
+  width: 100px;
+  height: 100px;
+}
+
 #top_restaurants {
   display: grid;
   grid-column-start: 3;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  color: #382110;
+}
+#top_restaurants img {
+  width: 100px;
+  height: 100px;
 }
 
 #visited_grid a {
@@ -211,6 +239,8 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 18px;
 }
+
+/* for smaller screens */
 @media screen and (max-width: 1500px) {
   #form-header {
     display: flex;
@@ -227,6 +257,71 @@ body {
     padding-bottom: 2%;
     border-radius: 3em; */
   }
+
+  #welcome_message {
+    display: flex;
+    text-align: left;
+    font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+  #visited_grid img {
+    width: 50px;
+    height: 50px;
+  }
+  #top_restaurants img {
+    width: 50px;
+    height: 50px;
+  }
+  #wanted_grid img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .content-blocks {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  #visited_grid {
+    display: grid;
+    grid-column-start: 1;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+  }
+
+  #wanted_grid {
+    display: grid;
+    grid-column-start: 2;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+  }
+
+  #top_restaurants {
+    display: grid;
+    grid-column-start: 3;
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+  }
+
+  #visited_grid a {
+    color: orange;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+  }
+  #top_restaurants a {
+    color: orange;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+  }
+  #wanted_grid a {
+    color: orange;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    text-align: wrap;
+  }
+
   .input-field {
     font-size: 20px;
     font-family: "Quicksand", sans-serif;
@@ -266,9 +361,27 @@ body {
     color: #6d6d6d;
     border-radius: 2em;
   }
+  #demo-button {
+    height: 50px;
+    width: 90px;
+    font-family: "Dancing Script", cursive;
+    font-size: 20px;
+    font-weight: bold;
+    font-size: 25px;
+    background-color: rgb(207, 207, 207);
+    color: #6d6d6d;
+    border-radius: 2em;
+  }
+
+  #demo-button:hover {
+    background-color: #382110;
+    color: #f4f1ea;
+    cursor: pointer;
+  }
 
   #login-button:hover {
     background-color: #382110;
+    color: #f4f1ea;
     cursor: pointer;
   }
 
@@ -287,4 +400,234 @@ body {
     font-size: 20px;
     margin: 2px;
   }
+}
+
+/* media screen for really small screens to adjust the nav bar */
+@media screen and (max-width: 600px) {
+  .nav_list {
+    flex-direction: column;
+  }
+  .nav_list li {
+    text-align: center;
+  }
+  /* this isnt working */
+  .nav_logout {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/*demo stuff */
+#demo-button {
+  height: 50px;
+  width: 90px;
+  font-family: "Dancing Script", cursive;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 25px;
+  background-color: rgb(207, 207, 207);
+  color: #6d6d6d;
+  border-radius: 2em;
+  outline: none;
+}
+
+#demo-button:hover {
+  background-color: #382110;
+  color: #f4f1ea;
+  cursor: pointer;
+}
+
+#login-button:hover {
+  background-color: #382110;
+  color: #f4f1ea;
+  cursor: pointer;
+}
+
+/* CSS FOR INDIVIDUAL RESTAURANT PAGES */
+
+#restaurant-name {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 70px;
+  font-weight: bold;
+  margin-top: 30px;
+  color: #382110;
+  font-family: "Dancing Script", cursive;
+}
+#restaurant-category {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  color: #382110;
+  font-size: 30px;
+  font-family: "Dancing Script", cursive;
+}
+
+#restaurant-description {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #382110;
+}
+
+#restaurant-img {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 2%;
+}
+
+#restaurant-streetAddress {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  margin-top: 1%;
+  font-weight: bold;
+  font-size: 24px;
+  font-family: "Quicksand", sans-serif;
+  color: #382110;
+}
+
+#restaurant-city {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #382110;
+}
+
+#restaurant-state {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  color: #382110;
+}
+
+#restaurant-zipCode {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-size: 16px;
+  font-family: "Quicksand", sans-serif;
+  color: #382110;
+}
+
+.form-button {
+  height: 50px;
+  width: 150px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  background-color: rgb(207, 207, 207);
+  color: #382110;
+  border-radius: 2em;
+  outline: none;
+}
+
+.form-button:hover {
+  background-color: #382110;
+  color: #f4f1ea;
+  cursor: pointer;
+}
+
+#restaurant-rating {
+  display: flex;
+  text-align: center;
+}
+
+.form-redirect {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  padding: 1px;
+  text-align: center;
+  justify-content: center;
+}
+/*
+#all-comments {
+  display: flex;
+  text-align: center;
+} */
+
+/*  box of comments after a use has posted them */
+.all-comments {
+  border: 2px solid #3a3a3a;
+  padding-bottom: 2%;
+  width: 500px;
+  height: 200px;
+  overflow: scroll;
+  background-color: rgb(240, 240, 240);
+  outline: none;
+}
+
+#comments-header {
+  font-family: "Dancing Script", cursive;
+  padding-top: 2%;
+  font-weight: bold;
+  font-size: 30px;
+  color: #382110;
+}
+
+/* the actual comment */
+#comment {
+  font-size: 18px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  padding: 1px;
+  color: rgb(42, 44, 44);
+}
+
+/* font for the 'how was it? leave a rating' portion */
+#rate-it {
+  font-family: "Dancing Script", cursive;
+  padding-top: 2%;
+  font-weight: bold;
+  font-size: 20px;
+  color: #382110;
+}
+
+/* text box for leaving a comment */
+.user-comment {
+  border: 2px solid #3a3a3a;
+  padding-bottom: 2%;
+  width: 500px;
+  height: 200px;
+  overflow: scroll;
+  background-color: rgb(240, 240, 240);
+  outline: none;
+}
+
+/* CSS FOR THE SUBPAGES - WANT TO, VISITED, AND BROWSE */
+.restaurant-subpage h1 {
+  font-family: "Dancing Script", cursive;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  color: #382110;
+}
+
+.restaurant-subpage div {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Quicksand", sans-serif;
+  margin-top: 1%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #382110;
+}
+
+.restaurant-subpage h2 {
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1%;
+  color: #382110;
 }
