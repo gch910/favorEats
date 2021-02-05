@@ -57,6 +57,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 #signup-button {
@@ -69,6 +70,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 /* a:link {
@@ -99,8 +101,8 @@ body {
 }
 
 .nav_logo img {
-  width: 140px;
-  height: 50px;
+  width: 200px;
+  height: auto;
   object-fit: cover;
 }
 
@@ -109,7 +111,7 @@ body {
   list-style: none;
   justify-content: space-between;
   align-items: center;
-  width: 600px;
+  width: 700px;
   margin-right: 210px;
 }
 
@@ -163,6 +165,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 #logout-button:hover {
@@ -322,6 +325,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 #demo-button:hover {
@@ -417,6 +421,7 @@ body {
   background-color: rgb(207, 207, 207);
   color: #6d6d6d;
   border-radius: 2em;
+  outline: none;
 }
 
 .form-button:hover {
@@ -446,7 +451,7 @@ body {
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
-  font-size: 25px;
+  font-size: 25git px;
 }
 #comment {
   font-size: 18px;
