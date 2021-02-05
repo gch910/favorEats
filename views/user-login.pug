@@ -22,3 +22,10 @@ block content
           div.button-div
             button(type="submit" id="login-button") Login!
           a(href="/users/sign-up" class="form-redirect") Don't have an account? Sign up here.
+    div
+      form(action="/users/login" class="form" method="post")
+        input(type="hidden" name="_csrf" value=csrfToken)
+        input(type="hidden" name="email" id="email" value="test@test.com" placeholder="email" class="input-field")
+        input(type="hidden" name="password" id="password" value="Password123!" class="input-field")
+        div
+          button(type="submit" id="demo-button") Demo

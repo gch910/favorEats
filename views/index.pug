@@ -18,6 +18,8 @@ block content
             - ++n
             div
               a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+            div
+              img(src=visitedRestaurants[n].img width="100px" height="100px")
         else
           p You have no visited restaurants yet!
 
@@ -29,6 +31,8 @@ block content
             - ++n
             div
               a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+            div
+              img(src=wantToVisit[n].img width="100px" height="100px")
         else
           p You have no restaurants in your want to visit list! :)
     div(id="top_restaurants")
@@ -36,3 +40,5 @@ block content
         each restaurant in highestRated
           div
             a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
+          div
+              img(src=restaurant.Restaurant.img width="100px" height="100px")
