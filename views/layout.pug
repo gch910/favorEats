@@ -4,13 +4,12 @@ html
     block head
       title="Express Starter App"
       link(rel='stylesheet' href='/stylesheets/index.css')
-      link(rel='stylesheet' href='/stylesheets/navbar.css')
   body
     .nav
       .nav_container
         .nav_logo
           a(href='/')
-            img(src='/media/logos/goodreads.png' width="100px")
+            img(src='/media/logos/temp_logo.png' width="100px")
         ul.nav_list
           li
             a(href='/') Home
@@ -22,6 +21,9 @@ html
             a(href='/restaurants') Browse
         .nav_search
           input(type="search" placeholder="Search")
+        .nav_logout
+          a(href='/users/logout')
+            button(type="submit" id="logout-button") logout
     //- div(class="navbar")
     //-   nav
     //-     img(src='/media/logos/goodreads.png' width="100px")

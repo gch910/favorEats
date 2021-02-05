@@ -78,10 +78,6 @@ body {
   margin-left: 12%;
 } */
 
-/* a:visited {
-  color: #0fa3b1;
-} */
-
 /* a.want-to-visit-links {
   color: green;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
@@ -92,14 +88,7 @@ body {
 .nav {
   display: flex;
   justify-content: center;
-  background-color: rgb(189, 189, 184);
-}
-
-.nav_list {
-  display: flex;
-  list-style: none;
-  justify-content: space-between;
-  width: 400px;
+  background-color: #f4f1ea;
 }
 
 .nav_container {
@@ -109,54 +98,119 @@ body {
   height: 50px;
 }
 
-.nav_list li {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: black;
-  /* background-color: rgb(189, 189, 184); */
-  font-family: "Quicksand", sans-serif;
-  width: 25%;
-}
-
-.nav_list li:hover {
-  background-color: black;
-  color: white;
-  cursor: pointer;
-}
-
-.nav_search {
-  display: flex;
-  align-items: center;
-}
-
 .nav_logo img {
   width: 140px;
   height: 50px;
   object-fit: cover;
 }
 
-#welcome_message  {
+.nav_list {
   display: flex;
-  justify-content: center;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  width: 600px;
+  margin-right: 210px;
 }
-#visited_grid  {
-  display: flex;
-  justify-content: center;
+
+.nav a {
+  color: #382110;
+  text-decoration: none;
 }
-#wanted_grid  {
+.nav a:hover {
+  color: #f4f1ea;
+}
+
+.nav_list li {
   display: flex;
+  align-items: center;
+  color: #382110;
+  width: 100%;
+  height: 50px;
   justify-content: center;
+  font-family: "Quicksand", sans-serif;
+}
+
+.nav_list li:hover {
+  background-color: #382110;
+  color: #f4f1ea;
+  cursor: pointer;
+}
+
+.nav_search {
+  display: flex;
+  align-items: center;
+  width: 200px;
+}
+.nav_logout {
+  display: flex;
+  align-items: center;
+}
+
+#logout-button {
+  height: 35px;
+  width: 75px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  background-color: rgb(207, 207, 207);
+  color: #6d6d6d;
+  border-radius: 2em;
+}
+
+#logout-button:hover {
+  background-color: #382110;
+  cursor: pointer;
+}
+
+#welcome_message {
+  display: flex;
+  text-align: left;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+  font-size: 30px;
+}
+.content-blocks {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+#visited_grid {
+  display: grid;
+  grid-column-start: 1;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
+}
+
+#wanted_grid {
+  display: grid;
+  grid-column-start: 2;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
 }
 #top_restaurants {
-  display: flex;
-  justify-content: center;
+  display: grid;
+  grid-column-start: 3;
+  font-family: "Quicksand", sans-serif;
+  font-weight: bold;
 }
 
-
-
-
-
+#visited_grid a {
+  color: orange;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+#top_restaurants a {
+  color: orange;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
+#wanted_grid a {
+  color: orange;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+}
 @media screen and (max-width: 1500px) {
   #form-header {
     display: flex;
@@ -182,17 +236,17 @@ body {
     text-align: center;
     border-radius: 0.7em;
   }
-  
+
   .form-div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  
+
   .input-div {
     padding: 5px;
   }
-  
+
   .button-div {
     padding: 5px;
     display: flex;
@@ -212,7 +266,12 @@ body {
     color: #6d6d6d;
     border-radius: 2em;
   }
-  
+
+  #login-button:hover {
+    background-color: #382110;
+    cursor: pointer;
+  }
+
   #signup-button {
     height: 50px;
     width: 150px;
