@@ -6,4 +6,6 @@ block content
     each restaurant in showRestaurants
       div
         a(href=`/restaurants/${restaurant.id}`)= restaurant.name
+      div
+        img(src=restaurant.img width="100px" height="100px")
 
