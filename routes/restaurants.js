@@ -165,4 +165,13 @@ router.post('/comment', asyncHandler(async (req, res) => {
     res.json({ comment, restaurantId, rating, restaurantRating, user })
 }))
 
+router.post('/visited/add', asyncHandler(async(req, res) => {
+  const { restaurantId } = req.body;
+  const userId = req.session.auth.userId
+  const createVisited = await db.VisitedRestaurant.create({
+    userId,
+    restaurantId
+  })
+}))
+
 module.exports = router;
