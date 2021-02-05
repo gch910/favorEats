@@ -170,6 +170,7 @@ body {
 
 #logout-button:hover {
   background-color: #382110;
+  color: #f4f1ea;
   cursor: pointer;
 }
 
@@ -179,6 +180,7 @@ body {
   font-family: "Dancing Script", cursive;
   font-weight: bold;
   font-size: 40px;
+  color: #382110;
 }
 .content-blocks {
   display: grid;
@@ -190,6 +192,7 @@ body {
   grid-column-start: 1;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  color: #382110;
 }
 #visited_grid img {
   width: 100px;
@@ -201,6 +204,7 @@ body {
   grid-column-start: 2;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  color: #382110;
 }
 
 #wanted_grid img {
@@ -213,6 +217,7 @@ body {
   grid-column-start: 3;
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
+  color: #382110;
 }
 #top_restaurants img {
   width: 100px;
@@ -370,11 +375,13 @@ body {
 
   #demo-button:hover {
     background-color: #382110;
+    color: #f4f1ea;
     cursor: pointer;
   }
 
   #login-button:hover {
     background-color: #382110;
+    color: #f4f1ea;
     cursor: pointer;
   }
 
@@ -426,11 +433,13 @@ body {
 
 #demo-button:hover {
   background-color: #382110;
+  color: #f4f1ea;
   cursor: pointer;
 }
 
 #login-button:hover {
   background-color: #382110;
+  color: #f4f1ea;
   cursor: pointer;
 }
 
@@ -511,19 +520,19 @@ body {
 
 .form-button {
   height: 50px;
-  width: 250px;
-  font-family: "Dancing Script", cursive;
-  font-size: 20px;
+  width: 150px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 15px;
   font-weight: bold;
-  font-size: 25px;
   background-color: rgb(207, 207, 207);
-  color: #6d6d6d;
+  color: #382110;
   border-radius: 2em;
   outline: none;
 }
 
 .form-button:hover {
   background-color: #382110;
+  color: #f4f1ea;
   cursor: pointer;
 }
 
