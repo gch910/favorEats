@@ -13,9 +13,9 @@ block content
       form(action="/users/sign-up" class="form" method="post")
         input(type="hidden", name="_csrf", value=csrfToken)
         div.input-div
-          input(type="text" name="username" id="username" value=user.username placeholder="Username" class="input-field")
+          input(type="text" name="username" id="username" value=username placeholder="Username" class="input-field")
         div.input-div
-          input(type="email" name="email" id="email" value=user.email placeholder="Email" class="input-field")
+          input(type="email" name="email" id="email" value=email placeholder="Email" class="input-field")
         div.input-div
           input(type="password" name="password" id="password" placeholder="Password" class="input-field")
         div.input-div

@@ -27,7 +27,7 @@ const userValidators = [
     .withMessage("Password must not be more than 50 characters long")
     .matches(/^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])/, "g")
     .withMessage(
-      'Your password contain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'
+      'Your password must ontain at least 1 lowercase letter, uppercase letter, number, and special character (i.e. "!@#$%^&*")'
     ),
   check("confirmPassword")
     .exists({ checkFalsy: true })
@@ -60,8 +60,9 @@ router.post(
     const { username, email, password } = req.body;
 
     const validatorErrors = validationResult(req);
-
+    console.log(validatorErrors)
     if (validatorErrors.isEmpty()) {
+      console.log("no errors")
       const hashedPassword = await bcrypt.hash(password, 10);
       const user = await db.User.create({
         username,
@@ -72,10 +73,11 @@ router.post(
       res.redirect("/");
     } else {
       const errors = validatorErrors.array().map((error) => error.msg);
-
+      console.log(errors)
       res.render("user-sign-up", {
         title: "Sign-up",
-        user,
+        username,
+        email,
         errors,
         csrfToken: req.csrfToken(),
       });
@@ -146,7 +148,7 @@ router.get("/logout", (req, res) => {
 router.post(
   "/login/demo",
   asyncHandler(async (req, res) => {
-    
+
     loginDemoUser();
     return res.redirect("/");
   })
