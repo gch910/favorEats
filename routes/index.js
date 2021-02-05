@@ -30,8 +30,6 @@ router.get(
     const visitedRestaurants = visited[0].visited
     const wantToVisit = visited[0].Restaurants
    
-    
-    
 
     res.render("index", {
       currentUser,

@@ -12,21 +12,27 @@ block content
   .content-blocks
     div(id="visited_grid")
       h2 Visited Restaurants:
-        - var n = 0;
-        while n < 3
-          - ++n
-          div
-            a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+        if visitedRestaurants.length
+          - var n = 0;
+          while n < 3
+            - ++n
+            div
+              a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
+        else
+          p You have no visited restaurants yet!
 
     div(id="wanted_grid")
       h2 Want To Visit:
-        - var n = 0;
-        while n < 3
-          - ++n
-          div
-            a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+        if wantToVisit.length
+          - var n = 0;
+          while n < 3
+            - ++n
+            div
+              a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+        else
+          p You have no restaurants in your want to visit list! :)
     div(id="top_restaurants")
       h2 Top Rated Restaurants:
-         each restaurant in highestRated
+        each restaurant in highestRated
           div
             a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
