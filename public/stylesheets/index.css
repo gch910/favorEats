@@ -80,12 +80,13 @@ body {
   margin-left: 12%;
 } */
 
-/* a.want-to-visit-links {
-  color: green;
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  text-align: center;
-  margin-left: 5%;
-} */
+.want-to-visit-links {
+  color: #8ed3f8;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
 
 .nav {
   display: flex;
@@ -195,8 +196,10 @@ body {
   color: #382110;
 }
 #visited_grid img {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
+  border-radius: 1em;
+  margin-top: 5px;
 }
 
 #wanted_grid {
@@ -208,8 +211,10 @@ body {
 }
 
 #wanted_grid img {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
+  border-radius: 1em;
+  margin-top: 5px;
 }
 
 #top_restaurants {
@@ -220,25 +225,56 @@ body {
   color: #382110;
 }
 #top_restaurants img {
-  width: 100px;
-  height: 100px;
+  width: 300px;
+  height: 200px;
+  border-radius: 1em;
+  margin-top: 5px;
 }
 
 #visited_grid a {
-  color: orange;
+  color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
 }
 #top_restaurants a {
-  color: orange;
+  color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
 }
 #wanted_grid a {
-  color: orange;
+  color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 18px;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
 }
+
+#total-rating {
+  position: relative;
+  left: 45%;
+  font-size: 36px;
+  /* font-family: "Dancing Script", cursive;
+  padding-top: 2%;
+  font-weight: bold;
+  font-size: 45px;
+  color: #382110; */
+  /* margin-bottom: .5em; */
+}
+
+
+
+
+
+
+
+
+
+
+
 
 /* for smaller screens */
 @media screen and (max-width: 1500px) {
@@ -303,20 +339,21 @@ body {
     grid-column-start: 3;
     font-family: "Quicksand", sans-serif;
     font-weight: bold;
+
   }
 
   #visited_grid a {
-    color: orange;
+    color: 8ed3f8;
     font-family: "Quicksand", sans-serif;
     font-size: 14px;
   }
   #top_restaurants a {
-    color: orange;
+    color: 8ed3f8;
     font-family: "Quicksand", sans-serif;
     font-size: 14px;
   }
   #wanted_grid a {
-    color: orange;
+    color: 8ed3f8;
     font-family: "Quicksand", sans-serif;
     font-size: 14px;
     text-align: wrap;
@@ -528,6 +565,9 @@ body {
   color: #382110;
   border-radius: 2em;
   outline: none;
+  position: relative;
+  left: 47%;
+  margin-top: .5em;
 }
 
 .form-button:hover {
@@ -556,21 +596,29 @@ body {
 
 /*  box of comments after a use has posted them */
 .all-comments {
+  position: relative;
+  left: 33%;
+  /* display: flex; */
+  /* justify-content: center; */
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
-  width: 500px;
-  height: 200px;
+  width: 600px;
+  height: 300px;
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
+  font-size: 58px;
 }
 
 #comments-header {
+  position: relative;
+  left: 45%;
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
-  font-size: 30px;
+  font-size: 45px;
   color: #382110;
+  margin-bottom: .5em;
 }
 
 /* the actual comment */
@@ -584,22 +632,30 @@ body {
 
 /* font for the 'how was it? leave a rating' portion */
 #rate-it {
+  position: relative;
+  left: 33%;
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 45px;
   color: #382110;
+  margin-bottom: .5em;
 }
 
 /* text box for leaving a comment */
 .user-comment {
+  position: relative;
+  left: 33%;
+  /* align-items: center; */
+  /* justify-content: center; */
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
-  width: 500px;
-  height: 200px;
+  width: 600px;
+  height: 175px;
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
+  font-size: 24px
 }
 
 /* CSS FOR THE SUBPAGES - WANT TO, VISITED, AND BROWSE */
@@ -632,14 +688,29 @@ body {
   color: #382110;
 }
 
+.image-subpage {
+  width: 300px;
+  height: 200px;
+  border-radius: .7em;
+  margin-top: 5px;
+}
+
 *{
     margin: 0;
     padding: 0;
 }
 .rate {
-    float: left;
-    height: 46px;
-    padding: 0 10px;
+  float: left;
+  height: 46px;
+  padding: 0 10px;
+  position: relative;
+  left: 46%;
+  /* font-family: "Dancing Script", cursive;
+  padding-top: 2%;
+  font-weight: bold;
+  font-size: 45px;
+  color: #382110; */
+  margin-bottom: .5em;
 }
 .rate:not(:checked) > input {
     position:absolute;
