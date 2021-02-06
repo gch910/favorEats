@@ -19,7 +19,8 @@ block content
             div
               a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
             div
-              img(src=visitedRestaurants[n].img width="100px" height="100px")
+            a(href=`/restaurants/${visitedRestaurants[n].id}`)
+              img(src=visitedRestaurants[n].img)
         else
           p You have no visited restaurants yet!
 
@@ -32,7 +33,8 @@ block content
             div
               a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
             div
-              img(src=wantToVisit[n].img width="100px" height="100px")
+            a(href=`/restaurants/${wantToVisit[n].id}`)
+              img(src=wantToVisit[n].img)
         else
           p You have no restaurants in your want to visit list! :)
     div(id="top_restaurants")
@@ -41,4 +43,6 @@ block content
           div
             a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
           div
-              img(src=restaurant.Restaurant.img width="100px" height="100px")
+          a(href=`/restaurants/${restaurant.Restaurant.id}`)
+            img(src=restaurant.Restaurant.img)
+

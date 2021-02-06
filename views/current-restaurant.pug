@@ -1,28 +1,54 @@
 extends layout.pug
 
 block content
-
-  h1= restaurant.name
-    div Category: #{restaurant.category}
-    div About: #{restaurant.description}
-    div Location:
-    p #{restaurant.streetAddress} 
-    p #{restaurant.city} #{restaurant.state}, #{restaurant.zipCode}
-    div= restaurantRating
-      img(src=restaurant.img width="500px" height="350px")
-    div(id="all-comments")
+  div 
+    form(method="post" action="/restaurants/visited/add" id=restaurant.id class="add-visited")
+      button(type="submit") Add to visited!
+    div(id="restaurant-name")= restaurant.name
+    div(id="restaurant-category") Category: #{restaurant.category}
+    div(id="restaurant-description")=restaurant.description
+    div(id="restaurant-img")
+      img(src=restaurant.img width="300px" height="auto")
+    div(id="restaurant-streetAddress")=restaurant.streetAddress
+    div(id="restaurant-city")=restaurant.city
+    div(id="restaurant-state")=restaurant.state
+      div(id="restaurant-zipCode") , #{restaurant.zipCode}
+    div(id="restaurant-rating")= restaurantRating
+    div(id="total-rating")
+      if restaurantRating === 5
+        p ⭐⭐⭐⭐⭐
+      if restaurantRating === 4
+        p ⭐⭐⭐⭐
+      if restaurantRating === 3
+        p ⭐⭐⭐
+      if restaurantRating === 2
+        p ⭐⭐
+      if restaurantRating === 1
+        p ⭐
+      if restaurantRating === 0
+        p There are no ratings for this restaurant
+    div(id="comments-header") Comments:
+    div.all-comments
       each comment in restaurantComments
-        div= comment.comment
-    h1 How was it?
+        div(id="comment") #{usersArray[comment.userId - 1]}: #{comment.comment}
+    div(id="rate-it") How was it? Rate and comment below!
     form(method="post" action="/restaurants/comment" id=restaurant.id class="comment-form")
-      div
-        input(type="radio" name="rate" id="star5" value="1")
-        input(type="radio" name="rate" id="star4" value="2")
+      div.rate
+        input(type="radio" name="rate" id="star5" value="5")
+        label(for="star5" title="text") 5 star
+        input(type="radio" name="rate" id="star4" value="4")
+        label(for="star4" title="text") 4 star
         input(type="radio" name="rate" id="star3" value="3")
-        input(type="radio" name="rate" id="star2" value="4")
-        input(type="radio" name="rate" id="star1" value="5")
+        label(for="star3" title="text") 3 star
+        input(type="radio" name="rate" id="star2" value="2")
+        label(for="star2" title="text") 2 star
+        input(type="radio" name="rate" id="star1" value="1")
+        label(for="star1" title="text") 1 star
+      br
+      br
+      br
       div
-        textarea(name="comment" rows="18" cols="70" class="user-comment")
+        textarea(name="comment" rows="18" cols="70" class="user-comment" required)
       div
         button(type="submit" class="form-button") Submit Comment
     script(src="/javascripts/index.js")
