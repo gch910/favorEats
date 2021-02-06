@@ -4,6 +4,8 @@
 
 body {
   background-color: #f8f4e3;
+  background-image: url("https://www.transparenttextures.com/patterns/food.png");
+  background-attachment: fixed;
 }
 
 #form-header {
@@ -194,11 +196,14 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   color: #382110;
+  margin: 0 auto;
+  text-align: center;
 }
 #visited_grid img {
   width: 300px;
   height: 200px;
   border-radius: 1em;
+  margin-bottom: 20px;
   margin-top: 5px;
 }
 
@@ -208,12 +213,15 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   color: #382110;
+  margin: 0 auto;
+  text-align: center;
 }
 
 #wanted_grid img {
   width: 300px;
   height: 200px;
   border-radius: 1em;
+  margin-bottom: 20px;
   margin-top: 5px;
 }
 
@@ -223,16 +231,26 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   color: #382110;
+  margin: 0 auto;
+  text-align: center;
 }
 #top_restaurants img {
   width: 300px;
   height: 200px;
   border-radius: 1em;
+  margin-bottom: 20px;
   margin-top: 5px;
 }
 
 #visited_grid a {
   color: #8ed3f8;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
+#visited_grid a:hover {
+  color: black;
   font-family: "Quicksand", sans-serif;
   font-size: 22px;
   font-weight: bold;
@@ -245,8 +263,22 @@ body {
   font-weight: bold;
   padding: 10px;
 }
+#top_restaurants a:hover {
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
 #wanted_grid a {
   color: #8ed3f8;
+  font-family: "Quicksand", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  padding: 10px;
+}
+#wanted_grid a:hover {
+  color: black;
   font-family: "Quicksand", sans-serif;
   font-size: 22px;
   font-weight: bold;
