@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
     try {
       console.log("inside try");
-      const res = await fetch("http://localhost:8080/restaurants/comment", {
+      const res = await fetch("/restaurants/comment", {
         method: "POST",
         body: JSON.stringify(body),
         headers: {
@@ -67,7 +67,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     const body = { restaurantId: e.target.id };
 
     try {
-      const res = await fetch("http://localhost:8080/restaurants/visited/add", {
+      const res = await fetch("/restaurants/visited/add", {
         method: "POST",
         body: JSON.stringify(body),
         headers: {

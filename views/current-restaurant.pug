@@ -1,9 +1,9 @@
 extends layout.pug
 
 block content
-  div 
+  div
     form(method="post" action="/restaurants/visited/add" id=restaurant.id class="add-visited")
-      button(type="submit") Add to visited!
+      button(type="submit" class="form-button") Add to visited!
     div(id="restaurant-name")= restaurant.name
     div(id="restaurant-category") Category: #{restaurant.category}
     div(id="restaurant-description")=restaurant.description
