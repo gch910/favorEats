@@ -6,6 +6,7 @@ const addVisited = document.querySelector(".add-visited");
 const addWantToVisit = document.querySelector(".add-want-to-visit");
 const addVisitedButton = document.getElementById("add-to-visited-button");
 const wantButton = document.getElementById("want-button");
+
 document.addEventListener("DOMContentLoaded", async (event) => {
   commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -137,4 +138,5 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       console.log(err);
     }
   });
+
 });

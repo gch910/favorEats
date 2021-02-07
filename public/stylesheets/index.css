@@ -749,6 +749,10 @@ body {
   display: none;
 }
 
+/* #remove-button {
+  margin-left: 50px;
+} */
+
 .form-button:hover {
   background-color: #382110;
   color: #f4f1ea;

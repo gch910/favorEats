@@ -10,4 +10,7 @@ block content
         div
           a(href=`/restaurants/${restaurant.id}`)
             img(src=restaurant.img id="want-to-visit-img")
+        div
+          form(method="post" action="/restaurants/want-to-visit/delete" id=restaurant.id)
+            button(type="submit" class="form-button" id="remove-button") Remove
 
