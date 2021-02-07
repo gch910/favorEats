@@ -85,6 +85,9 @@ router.get(
     users.forEach(user => {
       usersArray.push(user.username)
     })
+
+
+
     // console.log(usersArray)
 
     const ratings = allRatings.map(rating => {
@@ -114,7 +117,7 @@ router.get(
       restaurantComments,
       restaurantRatings,
       restaurantRating,
-      usersArray
+      usersArray,
     });
   })
 );
@@ -168,10 +171,37 @@ router.post('/comment', asyncHandler(async (req, res) => {
 router.post('/visited/add', asyncHandler(async(req, res) => {
   const { restaurantId } = req.body;
   const userId = req.session.auth.userId
-  const createVisited = await db.VisitedRestaurant.create({
+  const visited = await db.VisitedRestaurant.create({
     userId,
     restaurantId
   })
+  // const wantToVisits = await db.User.findAll({
+  //   include: [db.Restaurant],
+  //   where: {
+  //     id: user,
+  //   },
+  // });
+
+  res.json({ visited })
+
+}))
+
+router.post('/want-to-visit/add', asyncHandler(async(req, res) => {
+  const { restaurantId } = req.body;
+  const userId = req.session.auth.userId
+  const wantToVisit = await db.wantToVisit.create({
+    userId,
+    restaurantId
+  })
+  // const wantToVisits = await db.User.findAll({
+  //   include: [db.Restaurant],
+  //   where: {
+  //     id: user,
+  //   },
+  // });
+
+  res.json({ wantToVisit })
+
 }))
 
 module.exports = router;

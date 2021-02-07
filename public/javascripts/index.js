@@ -1,8 +1,9 @@
 const commentForm = document.querySelector(".comment-form");
 const commentDiv = document.querySelector(".all-comments");
-const userComment = document.querySelector(".user-comment");
+const userComment = document.getElementById("user-comment-container");
 const totalRating = document.getElementById("total-rating");
 const addVisited = document.querySelector(".add-visited");
+const addWantToVisit = document.querySelector(".add-want-to-visit");
 document.addEventListener("DOMContentLoaded", async (event) => {
   commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -64,7 +65,8 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
   addVisited.addEventListener("submit", async (e) => {
     e.preventDefault();
-    const body = { restaurantId: e.target.id };
+    const body = { restaurantId: e.target.id }
+    console.log('target', e.target.id)
 
     try {
       const res = await fetch("/restaurants/visited/add", {
@@ -83,8 +85,40 @@ document.addEventListener("DOMContentLoaded", async (event) => {
 
       // window.location.href = '/'
       const json = await res.json();
+    
+      console.log(json)
+      
     } catch (err) {
-      console.error(err);
+      console.log(err);
+    }
+  });
+  addWantToVisit.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const body = { restaurantId: e.target.id }
+    console.log('target', e.target.id)
+
+    try {
+      const res = await fetch("/restaurants/want-to-visit/add", {
+        method: "POST",
+        body: JSON.stringify(body),
+        headers: {
+          "Content-Type": "application/json",
+          // 'X-CSRF-TOKEN': token
+        },
+        // credentials: "include"
+      });
+      console.log("-------");
+      if (!res.ok) {
+        throw res;
+      }
+
+      // window.location.href = '/'
+      const json = await res.json();
+    
+      console.log(json)
+      
+    } catch (err) {
+      console.log(err);
     }
   });
 });

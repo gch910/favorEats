@@ -152,6 +152,47 @@ body {
   font-size: 27px;
 }
 
+#current-restaurant-img {
+  width: 700px;
+  height: 400;
+  border: solid 3px #8ed3f8;
+  border-radius: .7em;
+}
+
+#submit-comment-button {
+  margin-bottom: 150px;
+}
+
+#comment-username {
+  text-transform: uppercase;
+  font-weight: bold;
+ 
+  
+}
+
+#submit-comment-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+#add-to-visited-button-container {
+  margin-right: 1200px;
+}
+
+/* #add-to-want-button-container {
+  display: inline-block;
+} */
+
+#want-and-visited-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#want-button {
+  display: inline;
+}
+
 #browse-title {
   font-size: 70px;
   text-decoration: underline;
@@ -255,6 +296,7 @@ body {
   cursor: pointer;
 }
 
+
 #welcome_message {
   display: flex;
   text-align: left;
@@ -263,7 +305,7 @@ body {
   font-size: 40px;
   color: #382110;
   margin-top: 10px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   justify-content: center;
   
 }
@@ -371,8 +413,8 @@ body {
 }
 
 #total-rating {
-  position: relative;
-  left: 45%;
+  /* position: relative; */
+  /* left: 45%; */
   font-size: 36px;
   /* font-family: "Dancing Script", cursive;
   padding-top: 2%;
@@ -382,8 +424,16 @@ body {
   /* margin-bottom: .5em; */
 }
 
+#total-rating-container {
+  display: flex;
+  justify-content: center;
+}
 
 
+#user-comment-container {
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -419,6 +469,12 @@ body {
     font-size: 20px;
   }
 
+  .content-blocks img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  }
+
 
   #visited_grid img {
     width: 50px;
@@ -436,6 +492,7 @@ body {
   .content-blocks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   #visited_grid {
@@ -602,11 +659,11 @@ body {
 
 #restaurant-name {
   display: flex;
-  text-align: center;
+  /* text-align: center; */
   justify-content: center;
   font-size: 70px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 0px;
   color: #382110;
   font-family: "Dancing Script", cursive;
 }
@@ -630,7 +687,7 @@ body {
 
 #restaurant-img {
   display: flex;
-  text-align: center;
+  /* text-align: center; */
   justify-content: center;
   margin-top: 2%;
 }
@@ -683,9 +740,9 @@ body {
   color: #382110;
   border-radius: 2em;
   outline: none;
-  position: relative;
-  left: 47%;
-  margin-top: .5em;
+  /* position: relative; */
+  /* left: 47%; */
+  margin-top: 20px;
 }
 
 .form-button:hover {
@@ -714,22 +771,34 @@ body {
 
 /*  box of comments after a use has posted them */
 .all-comments {
-  position: relative;
-  left: 33%;
+  /* position: relative;
+  left: 33%; */
   /* display: flex; */
   /* justify-content: center; */
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
-  width: 600px;
-  height: 300px;
+  width: 800px;
+  height: 400px;
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
   font-size: 58px;
+ 
 }
 
+#comments-container {
+  display: flex;
+  justify-content: center;
+}
+
+#comment-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+
 #comments-header {
-  position: relative;
+  /* position: relative; */
   left: 45%;
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
@@ -737,21 +806,30 @@ body {
   font-size: 45px;
   color: #382110;
   margin-bottom: .5em;
+  display: block;
 }
 
 /* the actual comment */
 #comment {
-  font-size: 18px;
+  font-size: 30px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 1px;
-  color: rgb(42, 44, 44);
+  padding: 10px;
+  color: #68b7e2;
+  background-color: whitesmoke;
+  width: 92%;
+  border-radius: 1em;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  
 }
 
 /* font for the 'how was it? leave a rating' portion */
 #rate-it {
-  position: relative;
-  left: 33%;
+  /* position: relative;
+  left: 33%; */
+  display: flex;
+  justify-content: center;
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
@@ -760,16 +838,21 @@ body {
   margin-bottom: .5em;
 }
 
+#rate-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* text box for leaving a comment */
 .user-comment {
-  position: relative;
-  left: 33%;
+  /* position: relative;
+  left: 33%; */
   /* align-items: center; */
   /* justify-content: center; */
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
-  width: 600px;
-  height: 175px;
+  width: 700px;
+  height: 300px;
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
@@ -819,11 +902,11 @@ body {
     padding: 0;
 }
 .rate {
-  float: left;
+  /* float: left; */
   height: 46px;
   padding: 0 10px;
-  position: relative;
-  left: 46%;
+  /* position: relative; */
+  /* left: 46%; */
   /* font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
@@ -833,7 +916,8 @@ body {
 }
 .rate:not(:checked) > input {
     position:absolute;
-    top:-9999px;
+    /* top:-9999px; */
+    visibility: hidden;
 }
 .rate:not(:checked) > label {
     float:right;

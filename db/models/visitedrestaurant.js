@@ -16,9 +16,7 @@ module.exports = (sequelize, DataTypes) => {
   );
 
   VisitedRestaurant.associate = function (models) {
-    // VisitedRestaurant.belongsTo(models.User, {
-    //   foreignKey: "userId",
-    // });
+    
   };
   return VisitedRestaurant;
 };
