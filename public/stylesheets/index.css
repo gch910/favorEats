@@ -745,6 +745,10 @@ body {
   margin-top: 20px;
 }
 
+.hidden {
+  display: none;
+}
+
 .form-button:hover {
   background-color: #382110;
   color: #f4f1ea;

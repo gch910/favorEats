@@ -1,9 +1,11 @@
 const commentForm = document.querySelector(".comment-form");
 const commentDiv = document.querySelector(".all-comments");
-const userComment = document.getElementById("user-comment-container");
+const userCommentText = document.getElementById("user-comment-text");
 const totalRating = document.getElementById("total-rating");
 const addVisited = document.querySelector(".add-visited");
 const addWantToVisit = document.querySelector(".add-want-to-visit");
+const addVisitedButton = document.getElementById("add-to-visited-button");
+const wantButton = document.getElementById("want-button");
 document.addEventListener("DOMContentLoaded", async (event) => {
   commentForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -16,6 +18,8 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       restaurantId: e.target.id,
       rating: userRating,
     };
+
+    userCommentText.value = "";
 
     try {
       console.log("inside try");
@@ -52,11 +56,15 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       if (json.restaurantRating === 1) totalRating.innerHTML = "⭐";
       console.log(json);
       const newCommentDiv = document.createElement("div");
+      const userNameDiv = document.createElement("div");
+      const textDiv = document.createElement("div");
       newCommentDiv.id = "comment"
-      const comment = document.createTextNode(
-        `${json.user.username}: ${json.comment}`
-      );
-      newCommentDiv.appendChild(comment);
+      // const userName = document.createTextNode(`${json.user.username}:`);
+      // const text = document.createTextNode(`${json.comment}`)
+      userNameDiv.innerHTML = `USER: ${json.user.username}`.toUpperCase()
+      textDiv.innerHTML = `${json.comment}`
+      newCommentDiv.appendChild(userNameDiv);
+      newCommentDiv.appendChild(textDiv);
       commentDiv.appendChild(newCommentDiv);
     } catch (err) {
       console.log(err);
@@ -67,6 +75,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     e.preventDefault();
     const body = { restaurantId: e.target.id }
     console.log('target', e.target.id)
+    // addVisitedButton.classList.add("hidden");
+    addVisitedButton.innerHTML = "Added!";
+    addVisitedButton.disabled = true;
+    addVisitedButton.style.backgroundColor = "white";
+
 
     try {
       const res = await fetch("/restaurants/visited/add", {
@@ -96,6 +109,9 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     e.preventDefault();
     const body = { restaurantId: e.target.id }
     console.log('target', e.target.id)
+    wantButton.disabled = true;
+    wantButton.innerHTML = "Added!";
+    wantButton.style.backgroundColor = "white";
 
     try {
       const res = await fetch("/restaurants/want-to-visit/add", {
