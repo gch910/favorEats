@@ -2,11 +2,12 @@ extends layout.pug
 
 block content
   .restaurant-subpage
-    h1  Browse
-    h2 Check out the hottest restaurants below!
+    h1(id="browse-title")  Browse
+    h2(id="browse-h2") Check out the hottest restaurants below!
+    div(id="all-restaurants")
       each restaurant in showRestaurants
         div
-          a(href=`/restaurants/${restaurant.id}` class="want-to-visit-links")= restaurant.name
+          a(href=`/restaurants/${restaurant.id}` class="want-to-visit-links") #{restaurant.name}:
         div
           a(href=`/restaurants/${restaurant.id}`)
             img(src=restaurant.img class="image-subpage")

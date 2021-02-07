@@ -8,6 +8,12 @@ body {
   background-attachment: fixed;
 }
 
+#all-restaurants {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: auto;
+}
+
 #form-header {
   display: flex;
   justify-content: center;
@@ -85,22 +91,133 @@ body {
 .want-to-visit-links {
   color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 50px;
   font-weight: bold;
   padding: 10px;
+  text-align: center;
+}
+
+
+#visited-img {
+
+    width: 600px;
+    height: 400px;
+    border-radius: .7em;
+    margin-top: 5px;
+    border: solid 3px #8ed3f8;
+  
+}
+
+#index-visited-img {
+  border: solid 3px #8ed3f8;
+}
+
+#index-want-img {
+  border: solid 3px #8ed3f8;
+}
+
+#index-top-img {
+  border: solid 3px #8ed3f8;
+}
+
+
+#visited-title {
+  font-size: 70px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+
+}
+
+#visited-h2 {
+  margin: 0;
+  font-size: 27px;
+}
+
+#want-to-visit-img {
+    width: 600px;
+    height: 400px;
+    border-radius: .7em;
+    margin-top: 5px;
+    border: solid 3px #8ed3f8;
+}
+
+#want-to-visit-title {
+  font-size: 70px;
+  margin-top: 0px;
+  margin-bottom: 15px;
+}
+
+#want-to-visit-h2 {
+  margin: 0;
+  font-size: 27px;
+}
+
+#current-restaurant-img {
+  width: 700px;
+  height: 400;
+  border: solid 3px #8ed3f8;
+  border-radius: .7em;
+}
+
+#submit-comment-button {
+  margin-bottom: 150px;
+}
+
+#comment-username {
+  text-transform: uppercase;
+  font-weight: bold;
+ 
+  
+}
+
+#submit-comment-button-container {
+  display: flex;
+  justify-content: center;
+}
+
+#add-to-visited-button-container {
+  margin-right: 1200px;
+}
+
+/* #add-to-want-button-container {
+  display: inline-block;
+} */
+
+#want-and-visited-container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+#want-button {
+  display: inline;
+}
+
+#browse-title {
+  font-size: 70px;
+  text-decoration: underline;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+#browse-h2 {
+  margin: 0;
+  font-size: 27px; 
 }
 
 .nav {
   display: flex;
   justify-content: center;
   background-color: #f4f1ea;
+  margin-bottom: 15px;
 }
 
 .nav_container {
   display: flex;
   justify-content: space-between;
   width: 1220px;
-  height: 50px;
+  height: 60px;
+ 
 }
 
 .nav_logo img {
@@ -134,9 +251,11 @@ body {
 }
 
 .nav_list li:hover {
-  background-color: #382110;
+  background-color: #8ed3f8;
   text-decoration: none;
   cursor: pointer;
+  opacity: 0.8;
+
 }
 
 .nav_list li:hover a {
@@ -177,6 +296,7 @@ body {
   cursor: pointer;
 }
 
+
 #welcome_message {
   display: flex;
   text-align: left;
@@ -184,6 +304,10 @@ body {
   font-weight: bold;
   font-size: 40px;
   color: #382110;
+  margin-top: 10px;
+  margin-bottom: 30px;
+  justify-content: center;
+  
 }
 .content-blocks {
   display: grid;
@@ -198,10 +322,11 @@ body {
   color: #382110;
   margin: 0 auto;
   text-align: center;
+ 
 }
 #visited_grid img {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   border-radius: 1em;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -215,11 +340,12 @@ body {
   color: #382110;
   margin: 0 auto;
   text-align: center;
+  font-size: 100px;
 }
 
 #wanted_grid img {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   border-radius: 1em;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -235,8 +361,8 @@ body {
   text-align: center;
 }
 #top_restaurants img {
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 250px;
   border-radius: 1em;
   margin-bottom: 20px;
   margin-top: 5px;
@@ -245,49 +371,50 @@ body {
 #visited_grid a {
   color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bold;
   padding: 10px;
+ 
 }
 #visited_grid a:hover {
   color: black;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 33px;
   font-weight: bold;
   padding: 10px;
 }
 #top_restaurants a {
   color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bold;
   padding: 10px;
 }
 #top_restaurants a:hover {
   color: black;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 33px;
   font-weight: bold;
   padding: 10px;
 }
 #wanted_grid a {
   color: #8ed3f8;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: bold;
   padding: 10px;
 }
 #wanted_grid a:hover {
   color: black;
   font-family: "Quicksand", sans-serif;
-  font-size: 22px;
+  font-size: 33px;
   font-weight: bold;
   padding: 10px;
 }
 
 #total-rating {
-  position: relative;
-  left: 45%;
+  /* position: relative; */
+  /* left: 45%; */
   font-size: 36px;
   /* font-family: "Dancing Script", cursive;
   padding-top: 2%;
@@ -297,8 +424,16 @@ body {
   /* margin-bottom: .5em; */
 }
 
+#total-rating-container {
+  display: flex;
+  justify-content: center;
+}
 
 
+#user-comment-container {
+  display: flex;
+  justify-content: center;
+}
 
 
 
@@ -334,6 +469,13 @@ body {
     font-size: 20px;
   }
 
+  .content-blocks img {
+  object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+  }
+
+
   #visited_grid img {
     width: 50px;
     height: 50px;
@@ -350,6 +492,7 @@ body {
   .content-blocks {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
   }
 
   #visited_grid {
@@ -516,11 +659,11 @@ body {
 
 #restaurant-name {
   display: flex;
-  text-align: center;
+  /* text-align: center; */
   justify-content: center;
   font-size: 70px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 0px;
   color: #382110;
   font-family: "Dancing Script", cursive;
 }
@@ -544,7 +687,7 @@ body {
 
 #restaurant-img {
   display: flex;
-  text-align: center;
+  /* text-align: center; */
   justify-content: center;
   margin-top: 2%;
 }
@@ -597,9 +740,9 @@ body {
   color: #382110;
   border-radius: 2em;
   outline: none;
-  position: relative;
-  left: 47%;
-  margin-top: .5em;
+  /* position: relative; */
+  /* left: 47%; */
+  margin-top: 20px;
 }
 
 .form-button:hover {
@@ -628,22 +771,34 @@ body {
 
 /*  box of comments after a use has posted them */
 .all-comments {
-  position: relative;
-  left: 33%;
+  /* position: relative;
+  left: 33%; */
   /* display: flex; */
   /* justify-content: center; */
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
-  width: 600px;
-  height: 300px;
+  width: 800px;
+  height: 400px;
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
   font-size: 58px;
+ 
 }
 
+#comments-container {
+  display: flex;
+  justify-content: center;
+}
+
+#comment-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+
 #comments-header {
-  position: relative;
+  /* position: relative; */
   left: 45%;
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
@@ -651,21 +806,30 @@ body {
   font-size: 45px;
   color: #382110;
   margin-bottom: .5em;
+  display: block;
 }
 
 /* the actual comment */
 #comment {
-  font-size: 18px;
+  font-size: 30px;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  padding: 1px;
-  color: rgb(42, 44, 44);
+  padding: 10px;
+  color: #68b7e2;
+  background-color: whitesmoke;
+  width: 92%;
+  border-radius: 1em;
+  margin-bottom: 10px;
+  margin-left: 20px;
+  
 }
 
 /* font for the 'how was it? leave a rating' portion */
 #rate-it {
-  position: relative;
-  left: 33%;
+  /* position: relative;
+  left: 33%; */
+  display: flex;
+  justify-content: center;
   font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
@@ -674,16 +838,21 @@ body {
   margin-bottom: .5em;
 }
 
+#rate-container {
+  display: flex;
+  justify-content: center;
+}
+
 /* text box for leaving a comment */
 .user-comment {
-  position: relative;
-  left: 33%;
+  /* position: relative;
+  left: 33%; */
   /* align-items: center; */
   /* justify-content: center; */
   border: 2px solid #3a3a3a;
   padding-bottom: 2%;
-  width: 600px;
-  height: 175px;
+  width: 700px;
+  height: 300px;
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
@@ -725,6 +894,7 @@ body {
   height: 200px;
   border-radius: .7em;
   margin-top: 5px;
+  border: solid 3px #8ed3f8;
 }
 
 *{
@@ -732,11 +902,11 @@ body {
     padding: 0;
 }
 .rate {
-  float: left;
+  /* float: left; */
   height: 46px;
   padding: 0 10px;
-  position: relative;
-  left: 46%;
+  /* position: relative; */
+  /* left: 46%; */
   /* font-family: "Dancing Script", cursive;
   padding-top: 2%;
   font-weight: bold;
@@ -746,7 +916,8 @@ body {
 }
 .rate:not(:checked) > input {
     position:absolute;
-    top:-9999px;
+    /* top:-9999px; */
+    visibility: hidden;
 }
 .rate:not(:checked) > label {
     float:right;
