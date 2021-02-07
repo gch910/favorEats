@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     searchBar.addEventListener("keypress", async (e) => {
       // e.preventDefault();
       
-      const restaurantName = searchBar.value;
+      const restaurantName = searchBar.value.toLowerCase();
       const body = { something: 'hello' }
       try {
           const res = await fetch("/restaurants/search", {

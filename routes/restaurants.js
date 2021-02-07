@@ -248,7 +248,7 @@ router.post('/search', asyncHandler(async(req, res) => {
   
 
   restaurants.forEach(restaurant => {
-    restaurantById[restaurant.name] = restaurant.id
+    restaurantById[restaurant.name.toLowerCase()] = restaurant.id
   })
 
   res.json({ restaurantById })
