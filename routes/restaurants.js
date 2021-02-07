@@ -241,4 +241,17 @@ router.delete('/want-to-visit/delete', asyncHandler(async(req, res) => {
   res.json(removeRestaurant)
 }))
 
+router.post('/search', asyncHandler(async(req, res) => {
+  const restaurantById = {};
+
+  const restaurants = await db.Restaurant.findAll()
+  
+
+  restaurants.forEach(restaurant => {
+    restaurantById[restaurant.name] = restaurant.id
+  })
+
+  res.json({ restaurantById })
+}))
+
 module.exports = router;
