@@ -223,4 +223,22 @@ router.delete('/visited/delete', asyncHandler(async(req, res) => {
   res.json(removeRestaurant)
 }))
 
+router.delete('/want-to-visit/delete', asyncHandler(async(req, res) => {
+  const { restaurantId } = req.body ;
+
+  const userId = req.session.auth.userId;
+
+  const removeRestaurant = await db.wantToVisit.destroy({
+    where: {
+      restaurantId,
+    }
+  })
+
+  // removeRestaurant.forEach(async restaurant => await restaurant.destroy())
+  // console.log(removeRestaurant)
+  // await removeRestaurant.destroy()
+
+  res.json(removeRestaurant)
+}))
+
 module.exports = router;
