@@ -36,6 +36,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 20px;
 }
 
 .input-div {
@@ -337,6 +338,7 @@ body {
   color: #382110;
   margin: 0 auto;
   text-align: center;
+  font-size: 30px;
  
 }
 #visited_grid img {
@@ -355,7 +357,7 @@ body {
   color: #382110;
   margin: 0 auto;
   text-align: center;
-  font-size: 100px;
+  font-size: 30px;
 }
 
 #wanted_grid img {
@@ -563,6 +565,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
   }
 
   .input-div {
@@ -783,8 +786,10 @@ body {
   font-family: "Quicksand", sans-serif;
   font-weight: bold;
   padding: 1px;
-  text-align: center;
-  justify-content: center;
+  margin-left: 40px;
+
+  /* text-align: center; */
+  /* justify-content: center; */
 }
 /*
 #all-comments {

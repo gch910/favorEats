@@ -11,22 +11,28 @@ block content
     h1(id="index-title") Welcome, #{currentUser.username}!
   .content-blocks
     div(id="visited_grid")
-      h2(id="visited-h2") Visited Restaurants:
-        each restaurant in visitedRendered
-          div
-            a(href=`/restaurants/${restaurant.id}`)= restaurant.name
-          div
-          a(href=`/restaurants/${visitedRendered.id}`)
-            img(src=restaurant.img id="index-visited-img")
-
-    div(id="wanted_grid")
-      h2(id="want-to-visit-h2") Want To Visit:
-        each restaurant in wantToVisitRendered
+      if !visitedRendered.length 
+        h2 You Have No Visited Restaurants!
+      else
+        h2(id="visited-h2") Visited Restaurants:
+          each restaurant in visitedRendered
             div
               a(href=`/restaurants/${restaurant.id}`)= restaurant.name
             div
-            a(href=`/restaurants/${restaurant.id}`)
-              img(src=restaurant.img id="index-want-img")
+            a(href=`/restaurants/${visitedRendered.id}`)
+              img(src=restaurant.img id="index-visited-img")
+
+    div(id="wanted_grid")
+      if !wantToVisitRendered.length
+        h2 You Have No Want to Visits!
+      else
+        h2(id="want-to-visit-h2") Want To Visit:
+          each restaurant in wantToVisitRendered
+              div
+                a(href=`/restaurants/${restaurant.id}`)= restaurant.name
+              div
+              a(href=`/restaurants/${restaurant.id}`)
+                img(src=restaurant.img id="index-want-img")
     div(id="top_restaurants")
       h2(id="top-h2") Top Rated Restaurants:
         each restaurant in currentTop
