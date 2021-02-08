@@ -17,21 +17,19 @@ router.get(
       },
     });
 
-    const topRestaurants = await db.Rating.findAll({
-      where: {
-        rating: [4, 5]
+    // const topRestaurants = await db.Rating.findAll({
+    //   where: {
+    //     rating: [4, 5]
 
-      }
-    })
+    //   }
+    // })
 
     const restaurants = await db.Restaurant.findAll();
 
-    const topRatingsId = topRestaurants.map(rating => rating.restaurantId)
-    const filteredTopIds = topRatingsId.filter((id, i) => {
-      return topRatingsId.indexOf(id) === i;
-    })
-
-    
+    // const topRatingsId = topRestaurants.map(rating => rating.restaurantId)
+    // const filteredTopIds = topRatingsId.filter((id, i) => {
+    //   return topRatingsId.indexOf(id) === i;
+    // })
    
     // console.log(topRestaurants[0])
     const currentUser = visited[0]
@@ -50,20 +48,55 @@ router.get(
       wantToVisitRendered.push(wantToVisit[i])
     }
     
-    for(let i = 0; i < restaurants.length && i < 3; i++) {
-      if(filteredTopIds.includes(restaurants[i].id)) {
+    for(let i = 0; i < restaurants.length; i++) {
+      const restaurantId = restaurants[i].id
+      const allRatings = await db.Rating.findAll({
+        where: {
+          restaurantId,
+        }
+      })
+  
+      const ratings = allRatings.map(rating => {
+        if(rating.rating) {
+          return rating.rating
+        }})
+      let totalRating = 0;
+      let counter = 0;
+      ratings.forEach((rating) => {
+        counter++;
+        const parsedRating = parseInt(rating, 10)
+        if(rating !== undefined) {
+          totalRating += parsedRating
+        }
+
+      const restaurantRating = Math.floor(totalRating / counter)
+
+      if(restaurantRating >= 4 && !(topRendered.includes(restaurants[i].name))) {
         topRendered.push(restaurants[i])
       }
-    }
+    }) }
 
-    console.log(topRendered)
+     const topRatingsId = topRendered.map(restaurant => restaurant.id)
+    const filteredTopIds = topRatingsId.filter((id, i) => {
+      return topRatingsId.indexOf(id) === i;
+    })
+
+    console.log(filteredTopIds)
+
+    const currentTop = await db.Restaurant.findAll({
+      where: {
+        id: [...filteredTopIds]
+      }
+    })
+
+    console.log(currentTop)
     
 
     res.render("index", {
       currentUser,
       visitedRendered,
       wantToVisitRendered,
-      topRendered,
+      currentTop,
     });
   })
 );

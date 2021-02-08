@@ -6,6 +6,8 @@ const addVisited = document.querySelector(".add-visited");
 const addWantToVisit = document.querySelector(".add-want-to-visit");
 const addVisitedButton = document.getElementById("add-to-visited-button");
 const wantButton = document.getElementById("want-button");
+const rateDiv = document.querySelector(".rate")
+const rateContainer = document.getElementById("rate-container");
 
 document.addEventListener("DOMContentLoaded", async (event) => {
   commentForm.addEventListener("submit", async (e) => {
@@ -21,6 +23,11 @@ document.addEventListener("DOMContentLoaded", async (event) => {
     };
 
     userCommentText.value = "";
+    const afterRate = document.createElement('h1')
+    afterRate.id = "rated"
+    afterRate.innerHTML = "Thanks!"
+    rateDiv.classList.add("hidden")
+    rateContainer.appendChild(afterRate)
 
     try {
       console.log("inside try");

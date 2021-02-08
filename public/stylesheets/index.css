@@ -861,6 +861,16 @@ body {
   margin-bottom: .5em;
 }
 
+#rated {
+  font-family: "Dancing Script", cursive;
+    font-weight: bold;
+    font-size: 45px;
+    color: #68b7e2;
+    margin-bottom: .5em;
+    display: block;
+}
+
+
 #rate-container {
   display: flex;
   justify-content: center;

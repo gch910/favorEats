@@ -29,7 +29,7 @@ block content
               img(src=restaurant.img id="index-want-img")
     div(id="top_restaurants")
       h2(id="top-h2") Top Rated Restaurants:
-        each restaurant in topRendered
+        each restaurant in currentTop
           div
             a(href=`/restaurants/${restaurant.id}`)= restaurant.name
           div
