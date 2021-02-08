@@ -12,37 +12,27 @@ block content
   .content-blocks
     div(id="visited_grid")
       h2(id="visited-h2") Visited Restaurants:
-        if visitedRestaurants.length
-          - var n = 0;
-          while n < 3
-            - ++n
-            div
-              a(href=`/restaurants/${visitedRestaurants[n].id}`)= visitedRestaurants[n].name
-            div
-            a(href=`/restaurants/${visitedRestaurants[n].id}`)
-              img(src=visitedRestaurants[n].img id="index-visited-img")
-        else
-          p You have no visited restaurants yet!
+        each restaurant in visitedRendered
+          div
+            a(href=`/restaurants/${restaurant.id}`)= restaurant.name
+          div
+          a(href=`/restaurants/${visitedRendered.id}`)
+            img(src=restaurant.img id="index-visited-img")
 
     div(id="wanted_grid")
       h2(id="want-to-visit-h2") Want To Visit:
-        if wantToVisit.length
-          - var n = 0;
-          while n < 3
-            - ++n
+        each restaurant in wantToVisitRendered
             div
-              a(href=`/restaurants/${wantToVisit[n].id}`)= wantToVisit[n].name
+              a(href=`/restaurants/${restaurant.id}`)= restaurant.name
             div
-            a(href=`/restaurants/${wantToVisit[n].id}`)
-              img(src=wantToVisit[n].img id="index-want-img")
-        else
-          p You have no restaurants in your want to visit list! :)
+            a(href=`/restaurants/${restaurant.id}`)
+              img(src=restaurant.img id="index-want-img")
     div(id="top_restaurants")
       h2(id="top-h2") Top Rated Restaurants:
-        each restaurant in highestRated
+        each restaurant in currentTop
           div
-            a(href=`/restaurants/${restaurant.Restaurant.id}`)= restaurant.Restaurant.name
+            a(href=`/restaurants/${restaurant.id}`)= restaurant.name
           div
-          a(href=`/restaurants/${restaurant.Restaurant.id}`)
-            img(src=restaurant.Restaurant.img id="index-top-img")
+          a(href=`/restaurants/${restaurant.id}`)
+            img(src=restaurant.img id="index-top-img")
 

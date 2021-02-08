@@ -5,9 +5,12 @@ block content
     h1(id="want-to-visit-title") Want To Visit
     h2(id="want-to-visit-h2") These are the restaurants that you would like to visit:
       each restaurant in wantToVisit
-        div
+        div(id=restaurant.id class="want-restaurant")
           a(href=`/restaurants/${restaurant.id}` class="want-to-visit-links")= restaurant.name
-        div
+        div(id=restaurant.id class="want-restaurant")
           a(href=`/restaurants/${restaurant.id}`)
             img(src=restaurant.img id="want-to-visit-img")
+        div
+          button(type="submit" class="form-button remove-want-button" id=restaurant.id) Remove
+    script(src="/javascripts/want-to-visit.js")
 

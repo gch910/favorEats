@@ -20,7 +20,7 @@ html
           li
             a(href='/restaurants') Browse
         .nav_search
-          input(type="search" placeholder="Search")
+          input(type="search" placeholder="search" class='search-bar')
         .nav_logout
           a(href='/users/logout')
             button(type="submit" id="logout-button") logout
@@ -32,4 +32,5 @@ html
     //-     a(href='/restaurants/want-to-visit') Want to Visit
     //-     a(href='/restaurants') Browse
     //-     input(type="text")
+    script(src='/javascripts/search.js')
   block content

@@ -4,7 +4,7 @@ block content
     div(id="want-and-visited-container")
       form(method="post" action="/restaurants/visited/add" id=restaurant.id class="add-visited")
         div(id="add-to-visited-button-container")
-          button(type="submit" class="form-button") Add To Visited!
+          button(type="submit" class="form-button" id="add-to-visited-button") Add To Visited!
       form(method="post" action="/restaurants/want-to-visit/add" id=restaurant.id class="add-want-to-visit")
         div(id="add-to-want-button-container")
           button(type="submit" class="form-button" id="want-button") Want To Visit?
@@ -58,7 +58,7 @@ block content
         br
         br
       div(id="user-comment-container")
-        textarea(name="comment" rows="18" cols="70" class="user-comment" required)
+        textarea(name="comment" rows="18" cols="70" class="user-comment" id="user-comment-text" required)
       div(id="submit-comment-button-container")
         button(type="submit" class="form-button" id="submit-comment-button") Submit Comment
     script(src="/javascripts/index.js")

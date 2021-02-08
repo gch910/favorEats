@@ -181,6 +181,7 @@ router.post('/visited/add', asyncHandler(async(req, res) => {
   //     id: user,
   //   },
   // });
+  
 
   res.json({ visited })
 
@@ -202,6 +203,55 @@ router.post('/want-to-visit/add', asyncHandler(async(req, res) => {
 
   res.json({ wantToVisit })
 
+}))
+
+router.delete('/visited/delete', asyncHandler(async(req, res) => {
+  const { restaurantId } = req.body ;
+
+  const userId = req.session.auth.userId;
+
+  const removeRestaurant = await db.VisitedRestaurant.destroy({
+    where: {
+      restaurantId,
+    }
+  })
+
+  // removeRestaurant.forEach(async restaurant => await restaurant.destroy())
+  // console.log(removeRestaurant)
+  // await removeRestaurant.destroy()
+
+  res.json(removeRestaurant)
+}))
+
+router.delete('/want-to-visit/delete', asyncHandler(async(req, res) => {
+  const { restaurantId } = req.body ;
+
+  const userId = req.session.auth.userId;
+
+  const removeRestaurant = await db.wantToVisit.destroy({
+    where: {
+      restaurantId,
+    }
+  })
+
+  // removeRestaurant.forEach(async restaurant => await restaurant.destroy())
+  // console.log(removeRestaurant)
+  // await removeRestaurant.destroy()
+
+  res.json(removeRestaurant)
+}))
+
+router.post('/search', asyncHandler(async(req, res) => {
+  const restaurantById = {};
+
+  const restaurants = await db.Restaurant.findAll()
+  
+
+  restaurants.forEach(restaurant => {
+    restaurantById[restaurant.name.toLowerCase()] = restaurant.id
+  })
+
+  res.json({ restaurantById })
 }))
 
 module.exports = router;
