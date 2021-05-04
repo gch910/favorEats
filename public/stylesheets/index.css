@@ -8,6 +8,14 @@ body {
   background-attachment: fixed;
 }
 
+.no-outline:focus {
+  outline: none;
+}
+
+.alert-danger {
+  color: red;
+}
+
 #all-restaurants {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

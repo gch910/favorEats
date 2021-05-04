@@ -13,13 +13,13 @@ block content
       form(action="/users/sign-up" class="form" method="post")
         input(type="hidden", name="_csrf", value=csrfToken)
         div.input-div
-          input(type="text" name="username" id="username" value=username placeholder="Username" class="input-field")
+          input(type="text" name="username" id="username" value=username placeholder="Username" class="input-field no-outline")
         div.input-div
-          input(type="email" name="email" id="email" value=email placeholder="Email" class="input-field")
+          input(type="email" name="email" id="email" value=email placeholder="Email" class="input-field no-outline")
         div.input-div
-          input(type="password" name="password" id="password" placeholder="Password" class="input-field")
+          input(type="password" name="password" id="password" placeholder="Password" class="input-field no-outline")
         div.input-div
-          input(type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="input-field")
+          input(type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" class="input-field no-outline")
         div.button-div
           button(type="submit" id="signup-button") Sign Up!
         a(href="/users/login" class="form-redirect") Already have an account? Login here.
