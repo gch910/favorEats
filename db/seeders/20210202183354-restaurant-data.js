@@ -96,7 +96,7 @@ module.exports = {
         state: "TX",
         zipCode: 78704,
         img:
-          "https://res-2.cloudinary.com/dostuff-media/image/upload//c_fill,g_faces,f_auto,w_800/v1551477597/event-poster-10472713.jpg",
+          "https://roadfood.com/wp-content/uploads/2018/11/20181103_180955.jpg",
         createdAt: new Date(),
         updatedAt: new Date(),
       },
@@ -319,7 +319,8 @@ module.exports = {
         state: "Il",
         zipCode: 60661,
         img:
-          "https://lh3.googleusercontent.com/proxy/kK5xGWkk7Ieh03adpsPPBp4pCKAWEKbMSb3xZR0yfDEqJl_-pi8N30mM_0Y1uaomNPY0u9C0lY94kbqlRt9r6DBtljQVpHnIag",
+          "https://assets.hospitalityonline.com/photos/employers/254500/662188_l.jpg",
+
         createdAt: new Date(),
         updatedAt: new Date(),
       },
