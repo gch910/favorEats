@@ -98,15 +98,12 @@ body {
   text-align: center;
 }
 
-
 #visited-img {
-
-    width: 600px;
-    height: 400px;
-    border-radius: .7em;
-    margin-top: 5px;
-    border: solid 3px #8ed3f8;
-  
+  width: 600px;
+  height: 400px;
+  border-radius: 0.7em;
+  margin-top: 5px;
+  border: solid 3px #8ed3f8;
 }
 
 #index-visited-img {
@@ -121,12 +118,10 @@ body {
   border: solid 3px #8ed3f8;
 }
 
-
 #visited-title {
   font-size: 70px;
   margin-top: 0px;
   margin-bottom: 15px;
-
 }
 
 #visited-h2 {
@@ -135,11 +130,11 @@ body {
 }
 
 #want-to-visit-img {
-    width: 600px;
-    height: 400px;
-    border-radius: .7em;
-    margin-top: 5px;
-    border: solid 3px #8ed3f8;
+  width: 600px;
+  height: 400px;
+  border-radius: 0.7em;
+  margin-top: 5px;
+  border: solid 3px #8ed3f8;
 }
 
 #want-to-visit-title {
@@ -157,7 +152,7 @@ body {
   width: 700px;
   height: 400;
   border: solid 3px #8ed3f8;
-  border-radius: .7em;
+  border-radius: 0.7em;
 }
 
 #submit-comment-button {
@@ -167,8 +162,6 @@ body {
 #comment-username {
   text-transform: uppercase;
   font-weight: bold;
- 
-  
 }
 
 #submit-comment-button-container {
@@ -187,7 +180,6 @@ body {
 #want-and-visited-container {
   display: flex;
   justify-content: center;
-  
 }
 
 #want-button {
@@ -203,7 +195,7 @@ body {
 
 #browse-h2 {
   margin: 0;
-  font-size: 27px; 
+  font-size: 27px;
 }
 
 .nav {
@@ -218,7 +210,6 @@ body {
   justify-content: space-between;
   width: 1350px;
   height: 60px;
- 
 }
 
 .nav_logo img {
@@ -256,7 +247,6 @@ body {
   text-decoration: none;
   cursor: pointer;
   opacity: 0.8;
-
 }
 
 .nav_list li:hover a {
@@ -272,14 +262,16 @@ body {
   display: flex;
   align-items: center;
   width: 270px;
+  outline: none;
 }
 
 .search-bar {
   height: 35px;
   width: 270px;
   margin-right: 20px;
-  border-radius: .5em;
+  border-radius: 0.5em;
   font-size: 18px;
+  outline: none;
 }
 
 .nav .search-bar:focus {
@@ -312,7 +304,6 @@ body {
   cursor: pointer;
 }
 
-
 #welcome_message {
   display: flex;
   text-align: left;
@@ -323,7 +314,6 @@ body {
   margin-top: 10px;
   margin-bottom: 30px;
   justify-content: center;
-  
 }
 .content-blocks {
   display: grid;
@@ -339,7 +329,6 @@ body {
   margin: 0 auto;
   text-align: center;
   font-size: 30px;
- 
 }
 #visited_grid img {
   width: 350px;
@@ -391,7 +380,6 @@ body {
   font-size: 30px;
   font-weight: bold;
   padding: 10px;
- 
 }
 #visited_grid a:hover {
   color: black;
@@ -446,205 +434,9 @@ body {
   justify-content: center;
 }
 
-
 #user-comment-container {
   display: flex;
   justify-content: center;
-}
-
-
-
-
-
-
-
-
-
-/* for smaller screens */
-@media screen and (max-width: 1500px) {
-  #form-header {
-    display: flex;
-    justify-content: center;
-    font-family: "Sofia", sans-serif;
-    font-size: 40px;
-    color: #b5e2fa;
-    text-decoration: underline rgb(199, 197, 197);
-  }
-  /* border around the sign in box */
-  .form-container {
-    border: none;
-    /* margin: 5% 37% 40% 37%;
-    padding-bottom: 2%;
-    border-radius: 3em; */
-  }
-
-  #welcome_message {
-    display: flex;
-    text-align: left;
-    font-family: "Dancing Script", cursive;
-    font-weight: bold;
-    font-size: 20px;
-  }
-
-  .content-blocks img {
-  object-fit: cover;
-  width: 100%;
-  max-height: 100%;
-  }
-
-
-  #visited_grid img {
-    width: 50px;
-    height: 50px;
-  }
-  #top_restaurants img {
-    width: 50px;
-    height: 50px;
-  }
-  #wanted_grid img {
-    width: 50px;
-    height: 50px;
-  }
-
-  .content-blocks {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: auto;
-  }
-
-  #visited_grid {
-    display: grid;
-    grid-column-start: 1;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-  }
-
-  #wanted_grid {
-    display: grid;
-    grid-column-start: 2;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-  }
-
-  #top_restaurants {
-    display: grid;
-    grid-column-start: 3;
-    font-family: "Quicksand", sans-serif;
-    font-weight: bold;
-
-  }
-
-  #visited_grid a {
-    color: 8ed3f8;
-    font-family: "Quicksand", sans-serif;
-    font-size: 14px;
-  }
-  #top_restaurants a {
-    color: 8ed3f8;
-    font-family: "Quicksand", sans-serif;
-    font-size: 14px;
-  }
-  #wanted_grid a {
-    color: 8ed3f8;
-    font-family: "Quicksand", sans-serif;
-    font-size: 14px;
-    text-align: wrap;
-  }
-
-  .input-field {
-    font-size: 20px;
-    font-family: "Quicksand", sans-serif;
-    color: #3a3a3a;
-    height: 50px;
-    width: 350px;
-    text-align: center;
-    border-radius: 0.7em;
-  }
-
-  .form-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-  }
-
-  .input-div {
-    padding: 5px;
-  }
-
-  .button-div {
-    padding: 5px;
-    display: flex;
-    justify-content: center;
-    padding-top: 5%;
-    margin-bottom: 5%;
-  }
-
-  #login-button {
-    height: 50px;
-    width: 90px;
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: rgb(207, 207, 207);
-    color: #6d6d6d;
-    border-radius: 2em;
-  }
-  #demo-button {
-    height: 50px;
-    width: 90px;
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: rgb(207, 207, 207);
-    color: #6d6d6d;
-    border-radius: 2em;
-  }
-
-  #demo-button:hover {
-    background-color: #382110;
-    color: #f4f1ea;
-    cursor: pointer;
-  }
-
-  #login-button:hover {
-    background-color: #382110;
-    color: #f4f1ea;
-    cursor: pointer;
-  }
-
-  #signup-button {
-    height: 50px;
-    width: 150px;
-    font-family: "Dancing Script", cursive;
-    font-size: 20px;
-    font-weight: bold;
-    font-size: 25px;
-    background-color: rgb(207, 207, 207);
-    color: #6d6d6d;
-    border-radius: 2em;
-  }
-  .navbar a:link {
-    font-size: 20px;
-    margin: 2px;
-  }
-}
-
-/* media screen for really small screens to adjust the nav bar */
-@media screen and (max-width: 600px) {
-  .nav_list {
-    flex-direction: column;
-  }
-  .nav_list li {
-    text-align: center;
-  }
-  /* this isnt working */
-  .nav_logout {
-    flex-direction: column;
-    align-items: center;
-  }
 }
 
 /*demo stuff */
@@ -698,11 +490,22 @@ body {
   display: flex;
   text-align: center;
   justify-content: center;
+  align-items: center;
   font-size: 20px;
   font-family: "Quicksand", sans-serif;
   color: #382110;
 }
-
+#restaurant-desc-text {
+  display: block;
+  width: 800px;
+  margin-top: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  font-family: "Quicksand", sans-serif;
+  color: #382110;
+}
 #restaurant-img {
   display: flex;
   /* text-align: center; */
@@ -713,6 +516,7 @@ body {
 #restaurant-streetAddress {
   display: flex;
   text-align: center;
+
   justify-content: center;
   margin-top: 1%;
   font-weight: bold;
@@ -811,7 +615,6 @@ body {
   background-color: rgb(240, 240, 240);
   outline: none;
   font-size: 58px;
- 
 }
 
 #comments-container {
@@ -824,7 +627,6 @@ body {
   justify-content: center;
 }
 
-
 #comments-header {
   /* position: relative; */
   left: 45%;
@@ -833,7 +635,7 @@ body {
   font-weight: bold;
   font-size: 45px;
   color: #382110;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
   display: block;
 }
 
@@ -849,7 +651,6 @@ body {
   border-radius: 1em;
   margin-bottom: 10px;
   margin-left: 20px;
-  
 }
 
 /* font for the 'how was it? leave a rating' portion */
@@ -863,18 +664,17 @@ body {
   font-weight: bold;
   font-size: 45px;
   color: #382110;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 #rated {
   font-family: "Dancing Script", cursive;
-    font-weight: bold;
-    font-size: 45px;
-    color: #68b7e2;
-    margin-bottom: .5em;
-    display: block;
+  font-weight: bold;
+  font-size: 45px;
+  color: #68b7e2;
+  margin-bottom: 0.5em;
+  display: block;
 }
-
 
 #rate-container {
   display: flex;
@@ -894,7 +694,7 @@ body {
   overflow: scroll;
   background-color: rgb(240, 240, 240);
   outline: none;
-  font-size: 24px
+  font-size: 24px;
 }
 
 /* CSS FOR THE SUBPAGES - WANT TO, VISITED, AND BROWSE */
@@ -930,14 +730,14 @@ body {
 .image-subpage {
   width: 300px;
   height: 200px;
-  border-radius: .7em;
+  border-radius: 0.7em;
   margin-top: 5px;
   border: solid 3px #8ed3f8;
 }
 
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
 .rate {
   /* float: left; */
@@ -950,36 +750,36 @@ body {
   font-weight: bold;
   font-size: 45px;
   color: #382110; */
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 .rate:not(:checked) > input {
-    position:absolute;
-    /* top:-9999px; */
-    visibility: hidden;
+  position: absolute;
+  /* top:-9999px; */
+  visibility: hidden;
 }
 .rate:not(:checked) > label {
-    float:right;
-    width:1em;
-    overflow:hidden;
-    white-space:nowrap;
-    cursor:pointer;
-    font-size:30px;
-    color:#ccc;
+  float: right;
+  width: 1em;
+  overflow: hidden;
+  white-space: nowrap;
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc;
 }
 .rate:not(:checked) > label:before {
-    content: '★ ';
+  content: "★ ";
 }
 .rate > input:checked ~ label {
-    color: #ffc700;    
+  color: #ffc700;
 }
 .rate:not(:checked) > label:hover,
 .rate:not(:checked) > label:hover ~ label {
-    color: #deb217;  
+  color: #deb217;
 }
 .rate > input:checked + label:hover,
 .rate > input:checked + label:hover ~ label,
 .rate > input:checked ~ label:hover,
 .rate > input:checked ~ label:hover ~ label,
 .rate > label:hover ~ input:checked ~ label {
-    color: #c59b08;
+  color: #c59b08;
 }

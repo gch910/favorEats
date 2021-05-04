@@ -1,4 +1,4 @@
-extends layout.pug 
+extends layout.pug
 
 block content
     div(id="want-and-visited-container")
@@ -10,7 +10,8 @@ block content
           button(type="submit" class="form-button" id="want-button") Want To Visit?
     div(id="restaurant-name")= restaurant.name
     div(id="restaurant-category") Category: #{restaurant.category}
-    div(id="restaurant-description")=restaurant.description
+    div(id="restaurant-description")
+      div(id='restaurant-desc-text')=restaurant.description
     div(id="restaurant-img")
       img(src=restaurant.img id="current-restaurant-img")
     div(id="restaurant-streetAddress")=restaurant.streetAddress
@@ -37,7 +38,7 @@ block content
     div(id="comments-container")
       div.all-comments
         each comment in restaurantComments
-          div(id="comment") 
+          div(id="comment")
               div(id="comment-username") User: #{usersArray[comment.userId - 1]}
               div #{comment.comment}
     div(id="rate-it") How was it? Rate and comment below!
