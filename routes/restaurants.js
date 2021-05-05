@@ -72,6 +72,7 @@ router.get(
     const restaurantId = req.params.id;
     const restaurant = await db.Restaurant.findByPk(restaurantId, {
       include: [db.Comment, db.Rating],
+      order: [[db.Comment, "createdAt", "DESC"]],
     });
 
     const allRatings = await db.Rating.findAll({
@@ -105,6 +106,7 @@ router.get(
     const restaurantRating = Math.floor(totalRating / counter);
 
     const restaurantComments = restaurant.Comments; //[0].comment
+    console.log("COMMENTSSSS", restaurantComments);
     const restaurantRatings = restaurant.Ratings;
     // console.log(restaurantComments[0].userId)
     // console.log(restaurantRatings[0].rating)
