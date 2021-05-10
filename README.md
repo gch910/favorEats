@@ -9,6 +9,9 @@
   <p align="center">
     favorEats is a goodreads.com clone that allows for the tracking of restaurants. A user can browse restaurants and add a restaurant to their "Want to Visit" or "Visited" lists. A user can also rate and review restaurants, as well as read the reviews of other users!
     <br />
+  <br />
+    <a href="https://github.com/gch910/favorEats/wiki"><strong>Explore the docs »</strong></a>
+    <br />
     <br />
     <a href="http://favoreats-g12.herokuapp.com/">View Site</a>
   </p>
