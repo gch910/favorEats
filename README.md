@@ -1,6 +1,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/gch910/favorEats">
+    <img src="public/favicon.ico" alt="Logo" width="80" height="80" style="">
   </a>
 
   <h3 align="center">favorEats</h3>
