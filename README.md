@@ -24,12 +24,9 @@
         <li><a href="#built-with">Built With</a></li>
       </ul>
     </li>
-    <li>
-    </li>
     <li><a href="#notable">Notable Features</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
   </ol>
 </details>
 
@@ -116,7 +113,7 @@ Contributions are what make the open source community such an amazing place to b
 5. Open a Pull Request
 
 <!-- CONTACT -->
-## Contact & Acknowledgements
+## Contact
 
 * Gabriel Harris - [LinkedIn](https://www.linkedin.com/in/gabriel-harris-249231208/) - [GitHub](https://github.com/gch910)
 * Lauren Chambers - [LinkedIn](https://www.linkedin.com/in/lauren-chambers94/) - [Github](https://github.com/laurenchambers)
