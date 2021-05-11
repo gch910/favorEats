@@ -7,11 +7,6 @@
     "start:development": "nodemon -r dotenv/config ./bin/www",
     "start:production": "node ./bin/www"
   },
-  "production": {
-    "dialect": "postgres",
-    "seederStorage": "sequelize",
-    "use_env_variable": "DATABASE_URL"
-  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "connect-session-sequelize": "^7.0.4",
