@@ -13,7 +13,7 @@
     <a href="https://github.com/gch910/favorEats/wiki"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="http://favoreats-g12.herokuapp.com/">View Site</a>
+    <a href="https://favor-eats.herokuapp.com/">View Site</a>
   </p>
 </p>
 
@@ -35,7 +35,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-[Click here to view favorEats live on the web!](http://favoreats-g12.herokuapp.com/)
+[Click here to view favorEats live on the web!](https://favor-eats.herokuapp.com/)
 <br>
  <img src="./screenshots/landingpage.png"/>
    <img src="./screenshots/homepage.png"/>
