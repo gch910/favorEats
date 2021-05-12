@@ -23,6 +23,8 @@ body {
 
 
 
+.alert {
+  color: red;
 }
 
 .alert-danger {
