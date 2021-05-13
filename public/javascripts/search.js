@@ -1,15 +1,15 @@
 const searchBar = document.querySelector(".search-bar")
 
-document.addEventListener("DOMContentLoaded", async (event) => {
-    searchBar.addEventListener("keypress", async (e) => {
+// document.addEventListener("DOMContentLoaded", async (event) => {
+//     searchBar.addEventListener("submit", async (e) => {
       // e.preventDefault();
       
-      const restaurantName = searchBar.value.toLowerCase();
+      const search = searchBar.value.toLowerCase();
       const body = { something: 'hello' }
       try {
           const res = await fetch("/restaurants/search", {
           method: "POST",
-          body: JSON.stringify(body),
+          body: JSON.stringify({search}),
           headers: {
             "Content-type": "application/json",
           },
@@ -33,5 +33,5 @@ document.addEventListener("DOMContentLoaded", async (event) => {
       } catch (err) {
         console.log(err);
       }
-    });
-  });
+  //   });
+  // });

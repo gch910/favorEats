@@ -1,0 +1,15 @@
+extends layout.pug
+
+block content
+  .restaurant-subpage
+    h1(id="visited-title") Search Results
+    if searchResults.length === 0
+      h2(id="visited-h2") Sorry, No Restaurants Matched Your Search
+    else
+      h2(id="visited-h2") This is what matched your search
+        each restaurant in searchResults
+          div(id=restaurant.id class="visited-restaurant")
+            a(href=`/restaurants/${restaurant.id}` class="want-to-visit-links")= restaurant.name
+        //- div(id=restaurant.id class="visited-restaurant")
+        //-   a(href=`/restaurants/${restaurant.id}`)
+        //-     img(src=restaurant.img id="visited-img")

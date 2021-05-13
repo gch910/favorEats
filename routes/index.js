@@ -2,12 +2,13 @@ const express = require("express");
 const router = express.Router();
 const { requireAuth } = require("../auth");
 const db = require("../db/models");
-const { asyncHandler } = require("./utils");
+const { asyncHandler, csrfProtection } = require("./utils");
 
 /* GET home page. */
 router.get(
   "/",
   requireAuth,
+  csrfProtection,
   asyncHandler(async (req, res, next) => {
     const user = req.session.auth.userId;
     const visited = await db.User.findAll({
@@ -97,6 +98,7 @@ router.get(
       visitedRendered,
       wantToVisitRendered,
       currentTop,
+      // csrfToken: req.csrfToken(),
     });
   })
 );

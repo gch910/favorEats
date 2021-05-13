@@ -5,6 +5,7 @@ const { check, validationResult } = require("express-validator");
 const { requireAuth } = require("../auth");
 const { loginUser, logoutUser } = require("../auth");
 const { csrfProtection, asyncHandler } = require("./utils");
+const { Op } = require("sequelize");
 const db = require("../db/models");
 
 router.get(
@@ -253,16 +254,40 @@ router.delete(
 
 router.post(
   "/search",
+  // csrfProtection,
   asyncHandler(async (req, res) => {
     const restaurantById = {};
 
-    const restaurants = await db.Restaurant.findAll();
+    const {search} = req.body;
+    console.log("this is the body", search)
 
-    restaurants.forEach((restaurant) => {
-      restaurantById[restaurant.name.toLowerCase()] = restaurant.id;
-    });
+    // const restaurants = await db.Restaurant.findAll();
 
-    res.json({ restaurantById });
+    // restaurants.forEach((restaurant) => {
+    //   restaurantById[restaurant.name.toLowerCase()] = restaurant.id;
+    // });
+
+    // res.json({ req });
+
+    // res.render("results", {
+    //   title: "Results",
+    //   email,
+    //   errors,
+    //   csrfToken: req.csrfToken(),
+    // });
+
+    const searchResults = await db.Restaurant.findAll({
+      where: {
+        name: {
+          [Op.iLike]: "%" + search + "%",
+        }
+      }
+    })
+
+    console.log(searchResults)
+
+    res.render("search-results", {searchResults})
+
   })
 );
 
